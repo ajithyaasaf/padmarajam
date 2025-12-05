@@ -22,7 +22,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-white/70 text-sm max-w-xs leading-relaxed">
-              Run by Padmarajam Trust. Forging financial leaders with academic discipline and professional mastery since 1995.
+              Run by Padmarajam Trust. Shaping financial leaders with academic discipline and professional mastery since 1995.
             </p>
             <div className="flex gap-4">
               <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors">

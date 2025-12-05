@@ -26,7 +26,7 @@ export function Hero() {
             </div>
             
             <h1 className="font-serif text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.9] text-brand-purple mb-8 tracking-tight">
-              Forging <br/>
+              Shaping <br/>
               <span className="italic font-light text-brand-blue">Financial</span> <br/>
               Leaders.
             </h1>
