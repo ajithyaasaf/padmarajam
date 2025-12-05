@@ -1,4 +1,4 @@
-import logo from "@assets/generated_images/logo_for_prim_institute.png";
+import logo from "@assets/image_1764934886645.png";
 import { Phone, MapPin, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {

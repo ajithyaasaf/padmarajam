@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logo from "@assets/generated_images/logo_for_prim_institute.png";
+import logo from "@assets/image_1764934886645.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
