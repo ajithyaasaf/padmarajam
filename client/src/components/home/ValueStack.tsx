@@ -15,8 +15,8 @@ export function ValueStack() {
     {
       id: "01",
       icon: Library,
-      title: "The Goripalayam Advantage",
-      description: "Located centrally on Kalpalam Road, our campus offers an exclusive library and computer labs designed for distraction-free deep work. A sanctuary for serious aspirants.",
+      title: "Exclusive Learning Environment",
+      description: "Access our dedicated library and computer labs designed for distraction-free deep work. A sanctuary for serious aspirants located centrally on Kalpalam Road.",
       color: "text-brand-blue",
       bg: "bg-brand-blue/5",
       border: "border-brand-blue/20"
