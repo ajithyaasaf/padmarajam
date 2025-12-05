@@ -8,18 +8,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Column 1: Brand */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="h-12 w-12 bg-white/10 rounded-lg p-1">
-                <img src={logo} alt="PRIM Logo" className="h-full w-full object-contain" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif font-bold text-xl leading-none text-white">
-                  PRIM
-                </span>
-                <span className="text-xs tracking-widest uppercase text-white/60 font-medium">
-                  Institute of Management
-                </span>
-              </div>
+            <div className="h-24 w-auto inline-block bg-white rounded-xl p-3 shadow-lg">
+               <img src={logo} alt="PRIM Logo" className="h-full w-auto object-contain" />
             </div>
             <p className="text-white/70 text-sm max-w-xs leading-relaxed">
               Run by Padmarajam Trust. Shaping financial leaders with academic discipline and professional mastery since 1995.

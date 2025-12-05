@@ -32,18 +32,8 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <a className="flex items-center gap-3 group">
-            <div className="h-12 w-12 overflow-hidden rounded-lg">
-                <img src={logo} alt="PRIM Logo" className="h-full w-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
-            </div>
-            <div className="flex flex-col">
-              <span className={`font-serif font-bold text-lg leading-none ${isScrolled ? "text-brand-purple" : "text-brand-purple"}`}>
-                PRIM
-              </span>
-              <span className="text-[10px] tracking-widest uppercase text-brand-blue font-medium">
-                Institute of Management
-              </span>
-            </div>
+          <a className="flex items-center gap-3 group h-16">
+             <img src={logo} alt="PRIM Logo" className="h-full w-auto object-contain" />
           </a>
         </Link>
 
