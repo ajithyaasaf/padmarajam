@@ -1,155 +1,133 @@
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Play, CheckCircle2 } from "lucide-react";
-import heroImage from "@assets/generated_images/student_studying_in_a_classical_library.png";
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { CheckCircle2 } from "lucide-react";
 import student1 from "@assets/generated_images/portrait_of_a_female_ca_student.png";
 import student2 from "@assets/generated_images/portrait_of_a_male_cma_student.png";
 import student3 from "@assets/generated_images/portrait_of_a_female_acca_student.png";
 
+// Slide Data
+const slides = [
+  {
+    id: 1,
+    desktop: "/images/hero-slide-1-desktop.jpg",
+    mobile: "/images/hero-slide-1-mobile.jpg",
+    alt: "ACCA - The Passport to Global Career Success",
+  },
+  // Placeholder for second slide as requested (using same image for now to demonstrate slider)
+  {
+    id: 2,
+    desktop: "/images/hero-slide-1-desktop.jpg",
+    mobile: "/images/hero-slide-1-mobile.jpg",
+    alt: "Join the Premier Finance Education Institution",
+  },
+];
+
 export function Hero() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
+
   return (
-    <section className="relative pt-32 pb-24 lg:pt-36 lg:pb-32 overflow-hidden bg-background min-h-[90vh] flex flex-col justify-center">
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full lg:w-1/2"
-          >
-            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.0] text-brand-purple mb-8 tracking-tight">
-              Crafting <br />
-              Stories <br />
-              Through <span className="text-brand-blue">Success</span>
-            </h1>
+    <section className="relative w-full bg-background overflow-hidden">
+      {/* Main Slider */}
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+        opts={{
+          loop: true,
+        }}
+      >
+        <CarouselContent className="-ml-0">
+          {slides.map((slide) => (
+            <CarouselItem key={slide.id} className="pl-0">
+              <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] 2xl:h-[900px]">
+                <picture>
+                  <source media="(max-width: 767px)" srcSet={slide.mobile} />
+                  <source media="(min-width: 768px)" srcSet={slide.desktop} />
+                  <img
+                    src={slide.desktop}
+                    alt={slide.alt}
+                    className="w-full h-full object-cover object-top md:object-center"
+                  />
+                </picture>
+                {/* Gradient overlay for text legibility at the bottom if needed, 
+                    though these images have text embedded. keeping it subtle. */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        
+        {/* Navigation Arrows */}
+        <CarouselPrevious className="left-4 md:left-8 h-12 w-12 bg-white/20 hover:bg-white/40 border-none text-white backdrop-blur-sm" />
+        <CarouselNext className="right-4 md:right-8 h-12 w-12 bg-white/20 hover:bg-white/40 border-none text-white backdrop-blur-sm" />
+      </Carousel>
 
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-lg font-light">
-              Inspiring the next generation of financial leaders with the tools,
-              techniques, and taste to bring global excellence to every career —
-              one lesson at a time.
-            </p>
-
-            <div className="flex flex-wrap gap-5 items-center">
-              <Button
-                size="lg"
-                className="btn-primary-action bg-brand-purple hover:bg-brand-purple/90 text-white text-lg px-8 h-14 rounded-full shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-14 px-8 text-lg border-border text-foreground hover:bg-secondary/50 rounded-full flex items-center gap-2"
-              >
-                <Play className="h-4 w-4 fill-current" /> Success Story
-              </Button>
+      {/* Bottom Floating Stats Section - Overlaying the bottom of the hero */}
+      <div className="absolute bottom-0 left-0 right-0 z-20 translate-y-1/3 md:translate-y-0 md:bottom-8 lg:bottom-12 px-4">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto drop-shadow-2xl">
+            {/* 1. LEFT PANEL */}
+            <div className="hidden md:flex bg-white/90 backdrop-blur-md border border-white/50 p-6 md:p-6 rounded-l-[2rem] flex-1 w-full md:w-auto text-right pr-12 shadow-sm items-center justify-end">
+              <div>
+                <h3 className="font-serif font-bold text-xl text-brand-purple mb-0.5">
+                  Shaping Finance Leaders
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Global recognition, local excellence
+                </p>
+              </div>
             </div>
-          </motion.div>
 
-          {/* Image Grid Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="w-full lg:w-1/2 relative"
-          >
-            <div className="grid grid-cols-2 gap-4 h-[600px]">
-              {/* Column 1 */}
-              <div className="flex flex-col gap-4 pt-12">
-                <div className="h-64 w-full rounded-[2rem] overflow-hidden shadow-lg border-2 border-white relative group">
+            {/* 2. CENTER HUB (Floating Bridge) */}
+            <div className="z-30 -my-6 md:my-0 md:-mx-8 shrink-0 relative">
+              <div className="bg-white p-2 rounded-full shadow-xl flex items-center gap-1 border-4 border-white/50">
+                <div className="flex -space-x-4">
                   <img
                     src={student1}
-                    alt="Student"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-sm"
+                    alt="Avatar"
                   />
-                </div>
-                <div className="h-48 w-full rounded-[2rem] overflow-hidden shadow-lg border-2 border-white relative group">
-                  <img
-                    src={heroImage}
-                    alt="Library"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                </div>
-                <div className="h-24 w-24 rounded-full bg-brand-purple/10 backdrop-blur-md absolute -left-8 bottom-32 -z-10 animate-pulse" />
-              </div>
-
-              {/* Column 2 */}
-              <div className="flex flex-col gap-4">
-                <div className="h-80 w-full rounded-[2rem] overflow-hidden shadow-lg border-2 border-white relative group">
-                  <img
-                    src={student3}
-                    alt="Student"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                </div>
-                <div className="h-56 w-full rounded-[2rem] overflow-hidden shadow-lg border-2 border-white relative group bg-brand-orange/10 flex items-center justify-center">
                   <img
                     src={student2}
-                    alt="Student"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90"
+                    className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-sm"
+                    alt="Avatar"
                   />
+                  <img
+                    src={student3}
+                    className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-sm"
+                    alt="Avatar"
+                  />
+                </div>
+                {/* Badge */}
+                <div className="w-14 h-14 rounded-full border-4 border-white bg-gradient-to-br from-brand-orange to-red-500 text-white flex items-center justify-center font-bold text-md shadow-md relative z-10">
+                  10k+
                 </div>
               </div>
             </div>
-          </motion.div>
-        </div>
-      </div>
 
-      {/* Bottom Floating Stats Section - RESTRUCTURED */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/80 to-transparent z-20 pointer-events-none" />
-
-      <div className="container mx-auto px-4 md:px-6 relative z-30 mt-12 lg:mt-20">
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto drop-shadow-2xl">
-          {/* 1. LEFT PANEL */}
-          <div className="bg-white/90 backdrop-blur-md border border-white/50 p-6 md:p-8 rounded-[2rem] md:rounded-r-none flex-1 w-full md:w-auto text-center md:text-right md:pr-16 shadow-sm">
-            <h3 className="font-serif font-bold text-xl md:text-2xl text-brand-purple mb-1">
-              Because behind every line,
-            </h3>
-            <p className="text-muted-foreground text-sm md:text-base">
-              every number, and every success story.
-            </p>
-          </div>
-
-          {/* 2. CENTER HUB (Floating Bridge) */}
-          <div className="z-10 -my-6 md:my-0 md:-mx-12 shrink-0">
-            <div className="bg-white p-2 md:p-3 rounded-full shadow-xl flex items-center gap-1 border-4 border-white/50">
-              <div className="flex -space-x-4">
-                <img
-                  src={student1}
-                  className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-sm"
-                  alt="Avatar"
-                />
-                <img
-                  src={student2}
-                  className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-sm"
-                  alt="Avatar"
-                />
-                <img
-                  src={student3}
-                  className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-sm"
-                  alt="Avatar"
-                />
+            {/* 3. RIGHT PANEL */}
+            <div className="hidden md:flex bg-white/90 backdrop-blur-md border border-white/50 p-6 md:p-6 rounded-r-[2rem] flex-1 w-full md:w-auto text-left pl-12 shadow-sm items-center">
+              <div className="flex flex-col items-start">
+                <div className="flex gap-2 items-center text-yellow-500 mb-0.5">
+                  <CheckCircle2 className="h-5 w-5 fill-current" />
+                  <span className="font-bold text-brand-purple text-lg">
+                    Verified Excellence
+                  </span>
+                </div>
+                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
+                  Join the community
+                </p>
               </div>
-              {/* The big gradient circle like the '8k' in your image */}
-              <div className="w-16 h-16 rounded-full border-4 border-white bg-gradient-to-br from-brand-orange to-red-500 text-white flex items-center justify-center font-bold text-lg shadow-md relative z-10">
-                10k+
-              </div>
-            </div>
-          </div>
-
-          {/* 3. RIGHT PANEL */}
-          <div className="bg-white/90 backdrop-blur-md border border-white/50 p-6 md:p-8 rounded-[2rem] md:rounded-l-none flex-1 w-full md:w-auto text-center md:text-left md:pl-16 shadow-sm">
-            <div className="flex flex-col items-center md:items-start">
-              <div className="flex gap-2 items-center text-yellow-500 mb-1">
-                <CheckCircle2 className="h-5 w-5 fill-current" />
-                <span className="font-bold text-brand-purple text-lg">
-                  Verified Excellence
-                </span>
-              </div>
-              <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
-                Join the community
-              </p>
             </div>
           </div>
         </div>
