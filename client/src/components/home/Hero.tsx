@@ -31,7 +31,7 @@ export function Hero() {
   );
 
   return (
-    <section className="relative w-full bg-background overflow-hidden">
+    <section className="relative w-full bg-brand-purple">
       {/* Main Slider */}
       <Carousel
         plugins={[plugin.current]}
@@ -45,19 +45,21 @@ export function Hero() {
         <CarouselContent className="-ml-0">
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="pl-0">
-              <div className="relative w-full aspect-[9/16] md:aspect-[16/9]">
-                <picture>
+              {/* 
+                  Container is constrained to viewport height minus navbar (approx 80px) 
+                  to ensure the whole image is visible without scrolling.
+                  Background color fills any gaps if aspect ratio doesn't match perfectly.
+              */}
+              <div className="relative w-full h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
+                <picture className="w-full h-full flex items-center justify-center">
                   <source media="(max-width: 767px)" srcSet={slide.mobile} />
                   <source media="(min-width: 768px)" srcSet={slide.desktop} />
                   <img
                     src={slide.desktop}
                     alt={slide.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </picture>
-                {/* Gradient overlay for text legibility at the bottom if needed, 
-                    though these images have text embedded. keeping it subtle. */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
               </div>
             </CarouselItem>
           ))}
