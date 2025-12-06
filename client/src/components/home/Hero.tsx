@@ -24,10 +24,9 @@ export function Hero() {
               Through <span className="text-brand-blue">Success</span>
             </h1>
 
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-lg font-light">
-              Inspiring the next generation of financial leaders with the tools,
-              techniques, and taste to bring global excellence to every career —
-              one lesson at a time.
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-lg font-light border-l-2 border-brand-orange/30 pl-6">
+              Madurai’s premier destination for CA, CMA, and ACCA. Where academic
+              discipline meets professional mastery.
             </p>
 
             <div className="flex flex-wrap gap-5 items-center">
