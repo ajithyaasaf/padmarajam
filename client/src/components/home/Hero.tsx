@@ -49,14 +49,14 @@ export function Hero() {
         <CarouselContent className="-ml-0">
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="pl-0">
-              <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] 2xl:h-[900px]">
+              <div className="relative w-full aspect-[16/9]">
                 <picture>
                   <source media="(max-width: 767px)" srcSet={slide.mobile} />
                   <source media="(min-width: 768px)" srcSet={slide.desktop} />
                   <img
                     src={slide.desktop}
                     alt={slide.alt}
-                    className="w-full h-full object-cover object-top md:object-center"
+                    className="w-full h-full object-cover"
                   />
                 </picture>
                 {/* Gradient overlay for text legibility at the bottom if needed, 
