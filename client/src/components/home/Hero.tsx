@@ -12,14 +12,14 @@ import {
 const slides = [
   {
     id: 1,
-    desktop: "/images/hero-slide-1-desktop.jpg",
+    desktop: "/images/hero-slide-new-desktop.jpg",
     mobile: "/images/hero-slide-1-mobile.jpg",
     alt: "ACCA - The Passport to Global Career Success",
   },
   // Placeholder for second slide as requested (using same image for now to demonstrate slider)
   {
     id: 2,
-    desktop: "/images/hero-slide-1-desktop.jpg",
+    desktop: "/images/hero-slide-new-desktop.jpg",
     mobile: "/images/hero-slide-1-mobile.jpg",
     alt: "Join the Premier Finance Education Institution",
   },
