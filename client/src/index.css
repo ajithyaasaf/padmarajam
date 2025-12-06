@@ -81,9 +81,9 @@
   
   --radius: 0.3rem;
   
-  --brand-purple: 214 100% 26%; /* Now Primary Blue */
-  --brand-orange: 19 89% 54%;
-  --brand-blue: 206 100% 29%;
+  --brand-purple: 214 100% 26%; /* Primary Deep Blue */
+  --brand-orange: 19 89% 54%;   /* Action/Accent Orange */
+  --brand-blue: 214 100% 50%;   /* Secondary Bright Blue - Adjusted for hierarchy */
   
   --chart-1: 12 76% 61%;
   --chart-2: 173 58% 39%;
