@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
+import { Play, CheckCircle2 } from "lucide-react";
 import heroImage from "@assets/generated_images/student_studying_in_a_classical_library.png";
 import student1 from "@assets/generated_images/portrait_of_a_female_ca_student.png";
 import student2 from "@assets/generated_images/portrait_of_a_male_cma_student.png";
@@ -24,9 +24,10 @@ export function Hero() {
               Through <span className="text-brand-blue">Success</span>
             </h1>
 
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-lg font-light border-l-2 border-brand-orange/30 pl-6">
-              Madurai’s premier destination for CA, CMA, and ACCA. Where academic
-              discipline meets professional mastery.
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-lg font-light">
+              Inspiring the next generation of financial leaders with the tools,
+              techniques, and taste to bring global excellence to every career —
+              one lesson at a time.
             </p>
 
             <div className="flex flex-wrap gap-5 items-center">
@@ -70,7 +71,6 @@ export function Hero() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
-                {/* Floating circular accent */}
                 <div className="h-24 w-24 rounded-full bg-brand-purple/10 backdrop-blur-md absolute -left-8 bottom-32 -z-10 animate-pulse" />
               </div>
 
@@ -96,53 +96,58 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Bottom Floating Stats Section */}
+      {/* Bottom Floating Stats Section - RESTRUCTURED */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/80 to-transparent z-20 pointer-events-none" />
 
-      {/* 1. Adjusted Spacing: Changed to `mt-8 lg:mt-12`. Closer than before, but no overlap.
-       */}
-      <div className="container mx-auto px-4 md:px-6 relative z-30 mt-8 lg:mt-12">
-        {/* 2. Brand Colors: Changed bg to a gradient ending in purple tint, added purple border.
-         */}
-        <div className="bg-gradient-to-r from-white via-white to-brand-purple/10 backdrop-blur-xl border border-brand-purple/20 shadow-2xl rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row justify-between items-center gap-8 max-w-5xl mx-auto">
-          <div className="max-w-md">
-            <h3 className="font-serif font-bold text-2xl text-brand-purple mb-2">
+      <div className="container mx-auto px-4 md:px-6 relative z-30 mt-12 lg:mt-20">
+        <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto drop-shadow-2xl">
+          {/* 1. LEFT PANEL */}
+          <div className="bg-white/90 backdrop-blur-md border border-white/50 p-6 md:p-8 rounded-[2rem] md:rounded-r-none flex-1 w-full md:w-auto text-center md:text-right md:pr-16 shadow-sm">
+            <h3 className="font-serif font-bold text-xl md:text-2xl text-brand-purple mb-1">
               Because behind every line,
             </h3>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-sm md:text-base">
               every number, and every success story.
             </p>
           </div>
 
-          <div className="flex items-center gap-6">
-            <div className="flex -space-x-4">
-              <img
-                src={student1}
-                className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-sm"
-                alt="Avatar"
-              />
-              <img
-                src={student2}
-                className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-sm"
-                alt="Avatar"
-              />
-              <img
-                src={student3}
-                className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-sm"
-                alt="Avatar"
-              />
-              <div className="w-14 h-14 rounded-full border-4 border-white bg-brand-orange text-white flex items-center justify-center font-bold text-sm shadow-sm">
+          {/* 2. CENTER HUB (Floating Bridge) */}
+          <div className="z-10 -my-6 md:my-0 md:-mx-12 shrink-0">
+            <div className="bg-white p-2 md:p-3 rounded-full shadow-xl flex items-center gap-1 border-4 border-white/50">
+              <div className="flex -space-x-4">
+                <img
+                  src={student1}
+                  className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-sm"
+                  alt="Avatar"
+                />
+                <img
+                  src={student2}
+                  className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-sm"
+                  alt="Avatar"
+                />
+                <img
+                  src={student3}
+                  className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-sm"
+                  alt="Avatar"
+                />
+              </div>
+              {/* The big gradient circle like the '8k' in your image */}
+              <div className="w-16 h-16 rounded-full border-4 border-white bg-gradient-to-br from-brand-orange to-red-500 text-white flex items-center justify-center font-bold text-lg shadow-md relative z-10">
                 10k+
               </div>
             </div>
-            <div>
-              <div className="flex gap-1 text-yellow-500 mb-1">
+          </div>
+
+          {/* 3. RIGHT PANEL */}
+          <div className="bg-white/90 backdrop-blur-md border border-white/50 p-6 md:p-8 rounded-[2rem] md:rounded-l-none flex-1 w-full md:w-auto text-center md:text-left md:pl-16 shadow-sm">
+            <div className="flex flex-col items-center md:items-start">
+              <div className="flex gap-2 items-center text-yellow-500 mb-1">
                 <CheckCircle2 className="h-5 w-5 fill-current" />
-                <span className="font-bold text-brand-purple">
+                <span className="font-bold text-brand-purple text-lg">
                   Verified Excellence
                 </span>
               </div>
-              <p className="text-xs text-brand-purple/60 font-medium uppercase tracking-wider">
+              <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
                 Join the community
               </p>
             </div>
