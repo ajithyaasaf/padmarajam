@@ -46,17 +46,18 @@ export function Hero() {
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="pl-0">
               {/* 
-                  Full width, constrained height to fit screen.
-                  object-cover ensures no gaps, but will crop top/bottom if ratio differs.
+                  Using exact aspect ratio of the provided images:
+                  Desktop: 1920x800 (2.4:1)
+                  Mobile: 1080x1920 (9:16)
               */}
-              <div className="relative w-full h-[calc(100vh-80px)] min-h-[500px] max-h-[900px]">
+              <div className="relative w-full aspect-[9/16] md:aspect-[1920/800]">
                 <picture>
                   <source media="(max-width: 767px)" srcSet={slide.mobile} />
                   <source media="(min-width: 768px)" srcSet={slide.desktop} />
                   <img
                     src={slide.desktop}
                     alt={slide.alt}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover"
                   />
                 </picture>
               </div>
