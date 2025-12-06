@@ -1,7 +1,8 @@
 {
   "rewrites": [
-    { "source": "/assets/(.*)", "destination": "/public/assets/$1" },
-    { "source": "/favicon.png", "destination": "/public/favicon.png" },
-    { "source": "/(.*)", "destination": "/public/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
