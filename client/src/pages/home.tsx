@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/home/Hero";
+import { StatsBar } from "@/components/home/StatsBar";
 import { CourseGrid } from "@/components/home/CourseGrid";
 import { ValueStack } from "@/components/home/ValueStack";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <StatsBar />
         <CourseGrid />
         <ValueStack />
         <Testimonials />
