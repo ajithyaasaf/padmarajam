@@ -31,42 +31,44 @@ export function Hero() {
   );
 
   return (
-    <section className="relative w-full bg-background overflow-hidden">
-      {/* Main Slider */}
-      <Carousel
-        plugins={[plugin.current]}
-        className="w-full"
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
-        opts={{
-          loop: true,
-        }}
-      >
-        <CarouselContent className="-ml-0">
-          {slides.map((slide) => (
-            <CarouselItem key={slide.id} className="pl-0">
-              <div className="relative w-full aspect-[9/16] md:aspect-[21/9] md:max-h-[80vh]">
-                <picture>
-                  <source media="(max-width: 767px)" srcSet={slide.mobile} />
-                  <source media="(min-width: 768px)" srcSet={slide.desktop} />
-                  <img
-                    src={slide.desktop}
-                    alt={slide.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </picture>
-                {/* Gradient overlay for text legibility at the bottom if needed, 
-                    though these images have text embedded. keeping it subtle. */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        
-        {/* Navigation Arrows */}
-        <CarouselPrevious className="left-4 md:left-8 h-12 w-12 bg-white/20 hover:bg-white/40 border-none text-white backdrop-blur-sm" />
-        <CarouselNext className="right-4 md:right-8 h-12 w-12 bg-white/20 hover:bg-white/40 border-none text-white backdrop-blur-sm" />
-      </Carousel>
+    <section className="relative w-full bg-background overflow-hidden md:py-8">
+      <div className="md:container md:mx-auto">
+        {/* Main Slider */}
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-full md:rounded-3xl md:overflow-hidden md:shadow-2xl"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+          opts={{
+            loop: true,
+          }}
+        >
+          <CarouselContent className="-ml-0">
+            {slides.map((slide) => (
+              <CarouselItem key={slide.id} className="pl-0">
+                <div className="relative w-full aspect-[9/16] md:aspect-[16/9]">
+                  <picture>
+                    <source media="(max-width: 767px)" srcSet={slide.mobile} />
+                    <source media="(min-width: 768px)" srcSet={slide.desktop} />
+                    <img
+                      src={slide.desktop}
+                      alt={slide.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </picture>
+                  {/* Gradient overlay for text legibility at the bottom if needed, 
+                      though these images have text embedded. keeping it subtle. */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          
+          {/* Navigation Arrows */}
+          <CarouselPrevious className="left-4 md:left-8 h-12 w-12 bg-white/20 hover:bg-white/40 border-none text-white backdrop-blur-sm" />
+          <CarouselNext className="right-4 md:right-8 h-12 w-12 bg-white/20 hover:bg-white/40 border-none text-white backdrop-blur-sm" />
+        </Carousel>
+      </div>
     </section>
   );
 }
