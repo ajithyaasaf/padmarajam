@@ -46,18 +46,17 @@ export function Hero() {
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="pl-0">
               {/* 
-                  Container is constrained to viewport height minus navbar (approx 80px) 
-                  to ensure the whole image is visible without scrolling.
-                  Background color fills any gaps if aspect ratio doesn't match perfectly.
+                  Full width, constrained height to fit screen.
+                  object-cover ensures no gaps, but will crop top/bottom if ratio differs.
               */}
-              <div className="relative w-full h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
-                <picture className="w-full h-full flex items-center justify-center">
+              <div className="relative w-full h-[calc(100vh-80px)] min-h-[500px] max-h-[900px]">
+                <picture>
                   <source media="(max-width: 767px)" srcSet={slide.mobile} />
                   <source media="(min-width: 768px)" srcSet={slide.desktop} />
                   <img
                     src={slide.desktop}
                     alt={slide.alt}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover object-center"
                   />
                 </picture>
               </div>
