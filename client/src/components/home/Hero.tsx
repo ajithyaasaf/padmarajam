@@ -45,7 +45,7 @@ export function Hero() {
         <CarouselContent className="-ml-0">
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="pl-0">
-              <div className="relative w-full aspect-[16/9]">
+              <div className="relative w-full aspect-[9/16] md:aspect-[16/9]">
                 <picture>
                   <source media="(max-width: 767px)" srcSet={slide.mobile} />
                   <source media="(min-width: 768px)" srcSet={slide.desktop} />
