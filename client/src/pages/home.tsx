@@ -2,8 +2,10 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/home/Hero";
 import { StatsBar } from "@/components/home/StatsBar";
 import { AboutSection } from "@/components/home/AboutSection";
+import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { CourseGrid } from "@/components/home/CourseGrid";
 import { ValueStack } from "@/components/home/ValueStack";
+import { DistanceEducation } from "@/components/home/DistanceEducation";
 import { Testimonials } from "@/components/home/Testimonials";
 import { Footer } from "@/components/layout/Footer";
 
@@ -15,8 +17,10 @@ export default function Home() {
         <Hero />
         <StatsBar />
         <AboutSection />
+        <ProcessSteps />
         <CourseGrid />
         <ValueStack />
+        <DistanceEducation />
         <Testimonials />
       </main>
       <Footer />
