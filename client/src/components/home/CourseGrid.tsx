@@ -253,26 +253,6 @@ export function CourseGrid() {
             delay={0.3}
           />
 
-          {/* CPA (US) */}
-          <CourseCard
-            title="CPA (US)"
-            subtitle="USA Certification"
-            description="Top accounting certification for auditing, taxation, and financial reporting."
-            icon={Calculator}
-            className="md:col-span-1 min-h-[300px]"
-            delay={0.3}
-          />
-
-           {/* CFA (USA) */}
-           <CourseCard
-            title="CFA (USA)"
-            subtitle="Investment Finance"
-            description="Top finance certification for investment banking and portfolio management."
-            icon={Briefcase}
-            className="md:col-span-1 min-h-[300px]"
-            delay={0.3}
-          />
-
            {/* MBA Business Analytics */}
            <CourseCard
             title="MBA (Business Analytics)"
@@ -289,16 +269,6 @@ export function CourseGrid() {
             subtitle="Strategic Finance"
             description="Master strategic financial management for global enterprises."
             icon={Award}
-            className="md:col-span-1"
-            delay={0.4}
-          />
-
-           {/* AAT (UK) */}
-           <CourseCard
-            title="AAT (UK)"
-            subtitle="Accounting Skills"
-            description="Globally recognized qualification in bookkeeping and financial reporting."
-            icon={Scale}
             className="md:col-span-1"
             delay={0.4}
           />
