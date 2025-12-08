@@ -38,7 +38,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
           transition={{ duration: 0.6, delay }}
           className={cn(
             "group relative overflow-hidden rounded-[2rem] p-8 md:p-10 flex flex-col justify-between transition-all duration-500 cursor-pointer",
-            isFeatured ? "bg-brand-purple text-white" : "bg-white border border-border/50 hover:border-brand-orange/30",
+            isFeatured ? "bg-brand-purple text-white" : "bg-gradient-to-br from-white to-brand-purple/5 border border-brand-purple/10 hover:border-brand-orange/50",
             isDark ? "bg-brand-blue text-white" : "",
             "hover:shadow-2xl hover:shadow-brand-purple/10 hover:scale-[1.02]",
             className
@@ -53,7 +53,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
             <div className="flex justify-between items-start mb-8">
               <div className={cn(
                 "h-16 w-16 rounded-2xl flex items-center justify-center text-2xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3",
-                isFeatured || isDark ? "bg-white/10 text-white backdrop-blur-sm" : "bg-brand-purple/5 text-brand-purple"
+                isFeatured || isDark ? "bg-white/10 text-white backdrop-blur-sm" : "bg-brand-purple/10 text-brand-purple"
               )}>
                 <Icon className="h-8 w-8" />
               </div>
