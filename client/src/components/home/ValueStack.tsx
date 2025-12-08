@@ -15,8 +15,8 @@ export function ValueStack() {
     {
       id: "01",
       icon: Library,
-      title: "Exclusive Learning Environment",
-      description: "Access our dedicated library and computer labs designed for distraction-free deep work. A sanctuary for serious aspirants located centrally on Kalpalam Road.",
+      title: "30+ Years of Experience",
+      description: "PRIM is a leading coaching institute in Tamil Nadu for accountancy and management courses, with a rich history of creating quality professionals.",
       color: "text-brand-blue",
       bg: "bg-brand-blue/5",
       border: "border-brand-blue/20"
@@ -24,8 +24,8 @@ export function ValueStack() {
     {
       id: "02",
       icon: Users,
-      title: "Mentorship, Not Just Teaching",
-      description: "We move beyond textbooks. Learn directly from practicing CAs and industry veterans who guide you through the practical nuances of the financial world.",
+      title: "ISO Certified Institution",
+      description: "Padmarajam Institute of Management is the first institution in India to be recognized by the International Accreditation and Recognition Council forum (IAF), Australia.",
       color: "text-brand-purple",
       bg: "bg-brand-purple/5",
       border: "border-brand-purple/20"
@@ -33,8 +33,8 @@ export function ValueStack() {
     {
       id: "03",
       icon: GraduationCap,
-      title: "Integrated Success Model",
-      description: "Save precious years with our Dual-Path Strategy. Earn your B.Com degree simultaneously while preparing for your Professional exams, ensuring no time is lost.",
+      title: "100% Placements",
+      description: "In today's dynamic business world, CAs, Cost Auditors, and CS professionals are key business solution providers. We empower students to achieve success.",
       color: "text-brand-orange",
       bg: "bg-brand-orange/5",
       border: "border-brand-orange/20"

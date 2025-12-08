@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, BookOpen, LineChart, Globe, Scale, ArrowRight } from "lucide-react";
+import { ArrowUpRight, BookOpen, LineChart, Globe, Scale, ArrowRight, TrendingUp, Calculator, Megaphone, Briefcase, Award } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface CourseCardProps {
@@ -107,31 +107,31 @@ export function CourseGrid() {
             </div>
         </div>
 
-        {/* True Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 grid-rows-[auto_auto]">
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          {/* CA - The Anchor Card (Takes 2 cols, 2 rows on desktop if we wanted, but here 2 cols) */}
+          {/* CA - The Anchor Card */}
           <CourseCard
             title="Chartered Accountancy"
             subtitle="The Gold Standard"
-            description="Comprehensive coaching from Foundation to Final. Our integrated curriculum ensures deep understanding and exam success."
+            description="Comprehensive coaching from Foundation to Final. Integrated curriculum for exam success."
             icon={BookOpen}
-            className="md:col-span-2 md:row-span-2 min-h-[500px]"
+            className="md:col-span-2 min-h-[400px]"
             variant="featured"
             delay={0.1}
           />
 
-          {/* CMA - Side Card */}
+          {/* CIMA (UK) */}
           <CourseCard
-            title="CMA (India/US)"
+            title="CIMA (UK)"
             subtitle="Management Accounting"
-            description="Master strategic financial management for global enterprises."
-            icon={LineChart}
+            description="Global body for management accountants, offering the CGMA designation."
+            icon={TrendingUp}
             className="md:col-span-1 min-h-[300px]"
             delay={0.2}
           />
 
-           {/* ACCA - Bottom Right */}
+          {/* ACCA - Side Card */}
           <CourseCard
             title="ACCA Global"
             subtitle="International Career"
@@ -142,31 +142,76 @@ export function CourseGrid() {
             delay={0.3}
           />
 
-           {/* CS - Bottom Wide or another spot. Let's put it below CA if we want or make a 3rd row. 
-               Actually, let's make the grid interesting. 
-               Row 1: CA (2 cols), CMA (1 col)
-               Row 2: CS (1 col), ACCA (2 cols) 
-           */}
+          {/* CPA (US) */}
+          <CourseCard
+            title="CPA (US)"
+            subtitle="USA Certification"
+            description="Top accounting certification for auditing, taxation, and financial reporting."
+            icon={Calculator}
+            className="md:col-span-1 min-h-[300px]"
+            delay={0.3}
+          />
+
+           {/* CFA (USA) */}
+           <CourseCard
+            title="CFA (USA)"
+            subtitle="Investment Finance"
+            description="Top finance certification for investment banking and portfolio management."
+            icon={Briefcase}
+            className="md:col-span-1 min-h-[300px]"
+            delay={0.3}
+          />
+
+           {/* MBA Business Analytics */}
+           <CourseCard
+            title="MBA (Business Analytics)"
+            subtitle="Data Driven"
+            description="Equips you with predictive analytics, AI, and strategic insights for business growth."
+            icon={LineChart}
+            className="md:col-span-1"
+            delay={0.4}
+          />
+
+           {/* CMA (India/US) */}
+           <CourseCard
+            title="CMA (India/US)"
+            subtitle="Strategic Finance"
+            description="Master strategic financial management for global enterprises."
+            icon={Award}
+            className="md:col-span-1"
+            delay={0.4}
+          />
+
+           {/* AAT (UK) */}
+           <CourseCard
+            title="AAT (UK)"
+            subtitle="Accounting Skills"
+            description="Globally recognized qualification in bookkeeping and financial reporting."
+            icon={Scale}
+            className="md:col-span-1"
+            delay={0.4}
+          />
+
+          {/* MBA Digital Marketing */}
+          <CourseCard
+             title="MBA (Digital Marketing)"
+             subtitle="Modern Commerce"
+             description="Skills in online branding, SEO, social media, and e-commerce strategies."
+             icon={Megaphone}
+             className="md:col-span-1"
+             delay={0.5}
+         />
+
+        <div className="md:col-span-2 bg-white rounded-[2rem] p-10 border border-border/50 flex flex-col md:flex-row items-center justify-between gap-8 hover:shadow-xl transition-shadow duration-300 group">
+            <div className="max-w-md">
+                <h3 className="font-serif text-3xl font-bold text-brand-purple mb-2">Company Secretary</h3>
+                <p className="text-muted-foreground">Become the compliance backbone of major corporations with expert legal guidance.</p>
+            </div>
+            <button className="shrink-0 bg-brand-orange text-white px-8 py-4 rounded-full font-bold hover:bg-brand-orange/90 transition-all shadow-lg hover:shadow-brand-orange/20 flex items-center gap-2 group-hover:scale-105">
+                Course Details <ArrowRight className="h-5 w-5" />
+            </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-             <CourseCard
-                title="Company Secretary"
-                subtitle="Corporate Governance"
-                description="Become the compliance backbone of major corporations with expert legal guidance."
-                icon={Scale}
-                className="md:col-span-1"
-                delay={0.4}
-            />
-            <div className="md:col-span-2 bg-white rounded-[2rem] p-10 border border-border/50 flex flex-col md:flex-row items-center justify-between gap-8 hover:shadow-xl transition-shadow duration-300 group">
-                <div className="max-w-md">
-                    <h3 className="font-serif text-3xl font-bold text-brand-purple mb-2">Not sure which path?</h3>
-                    <p className="text-muted-foreground">Take our 2-minute assessment or talk to a career counselor to find your fit.</p>
-                </div>
-                <button className="shrink-0 bg-brand-orange text-white px-8 py-4 rounded-full font-bold hover:bg-brand-orange/90 transition-all shadow-lg hover:shadow-brand-orange/20 flex items-center gap-2 group-hover:scale-105">
-                    Book Counselling <ArrowRight className="h-5 w-5" />
-                </button>
-            </div>
         </div>
 
       </div>

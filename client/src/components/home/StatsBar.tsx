@@ -12,10 +12,10 @@ export function StatsBar() {
           <div className="hidden md:flex bg-white border border-border p-6 md:p-6 rounded-l-[2rem] flex-1 w-full md:w-auto text-right pr-12 shadow-sm items-center justify-end">
             <div>
               <h3 className="font-serif font-bold text-xl text-brand-purple mb-0.5">
-                Shaping Finance Leaders
+                30+ Years of Excellence
               </h3>
               <p className="text-muted-foreground text-sm">
-                Global recognition, local excellence
+                Leading coaching institute in TN
               </p>
             </div>
           </div>
@@ -42,7 +42,7 @@ export function StatsBar() {
               </div>
               {/* Badge */}
               <div className="w-14 h-14 rounded-full border-4 border-white bg-gradient-to-br from-brand-orange to-red-500 text-white flex items-center justify-center font-bold text-md shadow-md relative z-10">
-                10k+
+                3.5k+
               </div>
             </div>
           </div>
@@ -53,11 +53,11 @@ export function StatsBar() {
               <div className="flex gap-2 items-center text-yellow-500 mb-0.5">
                 <CheckCircle2 className="h-5 w-5 fill-current" />
                 <span className="font-bold text-brand-purple text-lg">
-                  Verified Excellence
+                  ISO Certified
                 </span>
               </div>
               <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
-                Join the community
+                Recognized by IAF Australia
               </p>
             </div>
           </div>
