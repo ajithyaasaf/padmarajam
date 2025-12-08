@@ -60,7 +60,7 @@ export function ProcessSteps() {
         </div>
 
         {/* Desktop Journey Line */}
-        <div className="hidden lg:block relative max-w-6xl mx-auto mt-48 mb-20 min-h-[600px]">
+        <div className="hidden lg:block relative max-w-6xl mx-auto mt-72 mb-20 min-h-[600px]">
           {/* Main Horizontal Line */}
           <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-blue-100 via-purple-100 to-green-100 -translate-y-1/2 rounded-full" />
           
