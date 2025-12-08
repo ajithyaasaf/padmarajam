@@ -232,24 +232,24 @@ export function CourseGrid() {
             delay={0.1}
           />
 
-          {/* CIMA (UK) */}
-          <CourseCard
-            title="CIMA (UK)"
-            subtitle="Management Accounting"
-            description="Global body for management accountants, offering the CGMA designation."
-            icon={TrendingUp}
-            className="md:col-span-1 min-h-[300px]"
-            delay={0.2}
-          />
-
-          {/* ACCA - Side Card */}
+          {/* ACCA - Side Card - Now Second */}
           <CourseCard
             title="ACCA Global"
             subtitle="International Career"
             description="Your passport to working in over 180 countries worldwide."
             icon={Globe}
             className="md:col-span-1 min-h-[300px]"
-            variant="dark"
+            variant="default"
+            delay={0.2}
+          />
+
+          {/* CIMA (UK) - Now Third */}
+          <CourseCard
+            title="CIMA (UK)"
+            subtitle="Management Accounting"
+            description="Global body for management accountants, offering the CGMA designation."
+            icon={TrendingUp}
+            className="md:col-span-1 min-h-[300px]"
             delay={0.3}
           />
 
