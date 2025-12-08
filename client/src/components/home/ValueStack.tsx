@@ -50,7 +50,7 @@ export function ValueStack() {
           <div className="lg:w-1/3">
              <div className="lg:sticky lg:top-32">
                 <span className="text-brand-orange font-bold tracking-widest uppercase text-sm mb-4 block">Why Choose PRIM</span>
-                <h2 className="font-serif text-5xl md:text-6xl font-bold text-brand-purple mb-8 leading-tight">
+                <h2 className="font-sans text-5xl md:text-6xl font-bold text-brand-purple mb-8 leading-tight">
                   More Than <br/> Just A <br/> Classroom.
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -76,7 +76,7 @@ export function ValueStack() {
                  
                  <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start">
                     <div className="shrink-0">
-                       <span className="text-6xl font-serif font-bold text-black/5 group-hover:text-black/10 transition-colors block mb-4 md:mb-0">
+                       <span className="text-6xl font-sans font-bold text-black/5 group-hover:text-black/10 transition-colors block mb-4 md:mb-0">
                          {feature.id}
                        </span>
                     </div>
@@ -86,7 +86,7 @@ export function ValueStack() {
                           <feature.icon className="h-7 w-7" />
                         </div>
                         
-                        <h3 className="font-serif text-3xl font-bold text-brand-purple mb-4 group-hover:text-black transition-colors">
+                        <h3 className="font-sans text-3xl font-bold text-brand-purple mb-4 group-hover:text-black transition-colors">
                           {feature.title}
                         </h3>
                         

@@ -40,7 +40,7 @@ export function AboutSection() {
                    style={{ y: y2, rotate: rotate }}
                    className="absolute -bottom-10 -right-10 bg-brand-orange text-white p-8 rounded-[2rem] shadow-xl z-20 max-w-[200px]"
                 >
-                   <div className="text-4xl font-serif font-bold mb-2">30+</div>
+                   <div className="text-4xl font-sans font-bold mb-2">30+</div>
                    <div className="text-sm font-medium opacity-90 leading-tight">Years of Educational Excellence</div>
                 </motion.div>
 
@@ -70,7 +70,7 @@ export function AboutSection() {
                  <span className="text-xs font-bold tracking-widest uppercase text-brand-purple">Since 1990</span>
               </div>
 
-              <h2 className="font-serif text-5xl md:text-7xl font-bold text-brand-purple mb-8 leading-[0.9] tracking-tight">
+              <h2 className="font-sans text-5xl md:text-7xl font-bold text-brand-purple mb-8 leading-[0.9] tracking-tight">
                 Architecting <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-500">
                   Global Careers
@@ -79,7 +79,7 @@ export function AboutSection() {
 
               <div className="relative pl-8 border-l-2 border-brand-orange/30 mb-10">
                  <Quote className="absolute -top-2 -left-3 h-6 w-6 text-brand-orange bg-secondary/10 fill-current" />
-                 <p className="text-2xl md:text-3xl font-serif text-foreground/80 italic leading-relaxed">
+                 <p className="text-2xl md:text-3xl font-sans text-foreground/80 italic leading-relaxed">
                    "Education unlocks potential and creates a possibility for everyone."
                  </p>
                  <footer className="mt-4 text-sm font-bold text-brand-purple uppercase tracking-wider">

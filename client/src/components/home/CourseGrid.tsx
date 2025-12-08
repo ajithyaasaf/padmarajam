@@ -76,7 +76,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
             )}
 
             <h3 className={cn(
-              "font-serif font-bold mb-4 leading-tight",
+              "font-sans font-bold mb-4 leading-tight",
               isFeatured ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl",
               isFeatured || isDark ? "text-white" : "text-brand-purple"
             )}>
@@ -121,7 +121,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
                      Course Overview
                   </div>
                   
-                  <h2 className="font-serif text-3xl font-bold mb-4">{title}</h2>
+                  <h2 className="font-sans text-3xl font-bold mb-4">{title}</h2>
                   <p className="text-white/80 leading-relaxed mb-8">{description}</p>
                   
                   {/* Video Placeholder */}
@@ -159,7 +159,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
             {/* Right: Application Form */}
             <div className="p-6 md:p-8 bg-white">
                <DialogHeader className="mb-6 text-left">
-                 <DialogTitle className="text-2xl font-serif font-bold text-brand-purple">Apply Now</DialogTitle>
+                 <DialogTitle className="text-2xl font-sans font-bold text-brand-purple">Apply Now</DialogTitle>
                  <DialogDescription>
                    Fill out the form below to register your interest for {title}.
                  </DialogDescription>
@@ -204,7 +204,7 @@ export function CourseGrid() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div className="max-w-2xl">
-                <h2 className="font-serif text-5xl md:text-6xl font-bold text-brand-purple mb-6 leading-[0.9]">
+                <h2 className="font-sans text-5xl md:text-6xl font-bold text-brand-purple mb-6 leading-[0.9]">
                     Academic <br/> Programs
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-lg">
@@ -315,7 +315,7 @@ export function CourseGrid() {
 
         <div className="md:col-span-2 bg-white rounded-[2rem] p-10 border border-border/50 flex flex-col md:flex-row items-center justify-between gap-8 hover:shadow-xl transition-shadow duration-300 group">
             <div className="max-w-md">
-                <h3 className="font-serif text-3xl font-bold text-brand-purple mb-2">Company Secretary</h3>
+                <h3 className="font-sans text-3xl font-bold text-brand-purple mb-2">Company Secretary</h3>
                 <p className="text-muted-foreground">Become the compliance backbone of major corporations with expert legal guidance.</p>
             </div>
             <button className="shrink-0 bg-brand-orange text-white px-8 py-4 rounded-full font-bold hover:bg-brand-orange/90 transition-all shadow-lg hover:shadow-brand-orange/20 flex items-center gap-2 group-hover:scale-105">

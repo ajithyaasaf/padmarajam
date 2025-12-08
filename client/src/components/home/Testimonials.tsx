@@ -44,7 +44,7 @@ export function Testimonials() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-brand-purple mb-4">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-brand-purple mb-4">
               We Let Our Results Speak.
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -94,7 +94,7 @@ export function Testimonials() {
                         <Quote className="absolute top-6 right-6 h-8 w-8 text-brand-purple/10" />
                         
                         <div className="mb-4">
-                          <h3 className="font-serif text-xl font-bold text-brand-purple">{review.name}</h3>
+                          <h3 className="font-sans text-xl font-bold text-brand-purple">{review.name}</h3>
                           <p className="text-sm text-brand-orange font-medium">{review.course}</p>
                           <p className="text-xs text-muted-foreground mt-1">{review.year}</p>
                         </div>

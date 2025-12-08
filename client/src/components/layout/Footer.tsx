@@ -29,7 +29,7 @@ export function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-6 text-white">Programs</h3>
+            <h3 className="font-sans text-lg font-semibold mb-6 text-white">Programs</h3>
             <ul className="space-y-4">
               <li>
                 <a href="#" className="text-white/70 hover:text-brand-orange transition-colors flex items-center gap-2">
@@ -60,7 +60,7 @@ export function Footer() {
 
           {/* Column 3: Contact */}
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-6 text-white">Contact Us</h3>
+            <h3 className="font-sans text-lg font-semibold mb-6 text-white">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/70">
                 <MapPin className="h-5 w-5 text-brand-orange shrink-0 mt-1" />

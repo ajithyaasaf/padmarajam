@@ -11,7 +11,7 @@ export function StatsBar() {
           {/* 1. LEFT PANEL */}
           <div className="hidden md:flex bg-white border border-border p-6 md:p-6 rounded-l-[2rem] flex-1 w-full md:w-auto text-right pr-40 shadow-sm items-center justify-end">
             <div>
-              <h3 className="font-serif font-bold text-xl text-brand-purple mb-0.5">
+              <h3 className="font-sans font-bold text-xl text-brand-purple mb-0.5">
                 30+ Years of Excellence
               </h3>
               <p className="text-muted-foreground text-sm">

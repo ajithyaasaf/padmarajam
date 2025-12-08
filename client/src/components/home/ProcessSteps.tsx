@@ -97,7 +97,7 @@ export function ProcessSteps() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="font-sans text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
             Your Roadmap to <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-600">
@@ -139,7 +139,7 @@ export function ProcessSteps() {
               )}
 
               {/* Step Number Watermark */}
-              <div className="absolute top-4 right-6 text-9xl font-serif font-bold opacity-[0.03] select-none pointer-events-none transition-opacity group-hover:opacity-[0.06]">
+              <div className="absolute top-4 right-6 text-9xl font-sans font-bold opacity-[0.03] select-none pointer-events-none transition-opacity group-hover:opacity-[0.06]">
                 {step.id}
               </div>
 

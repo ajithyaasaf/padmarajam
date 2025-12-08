@@ -60,7 +60,7 @@ export function DistanceEducation() {
               <span className="font-bold tracking-widest uppercase text-sm">Global Learning</span>
             </motion.div>
             
-            <h2 className="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+            <h2 className="font-sans text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Education Beyond <br/> Boundaries
             </h2>
             <p className="text-xl text-white font-light max-w-xl">
@@ -114,7 +114,7 @@ export function DistanceEducation() {
                    </div>
                    
                    <h3 className={cn(
-                     "font-serif font-bold mb-2 transition-all duration-300 text-white",
+                     "font-sans font-bold mb-2 transition-all duration-300 text-white",
                      activeId === course.id ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"
                    )}>
                      {course.title}
