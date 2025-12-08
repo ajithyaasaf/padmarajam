@@ -60,10 +60,10 @@ export function DistanceEducation() {
               <span className="font-bold tracking-widest uppercase text-sm">Global Learning</span>
             </motion.div>
             
-            <h2 className="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Education Beyond <br/> Boundaries
             </h2>
-            <p className="text-xl text-white/60 font-light max-w-xl">
+            <p className="text-xl text-white font-light max-w-xl">
               Break the barriers of traditional classroom learning. Access world-class education from anywhere in the world.
             </p>
           </div>
@@ -74,7 +74,7 @@ export function DistanceEducation() {
         </div>
 
         {/* Expandable Cards Layout */}
-        <div className="flex flex-col lg:flex-row gap-4 h-[600px] lg:h-[500px]">
+        <div className="flex flex-col lg:flex-row gap-4 min-h-[600px] lg:h-[500px]">
           {courses.map((course) => (
             <motion.div
               key={course.id}
@@ -82,7 +82,7 @@ export function DistanceEducation() {
               onClick={() => setActiveId(course.id)}
               className={cn(
                 "relative rounded-[2rem] overflow-hidden cursor-pointer transition-all duration-500 ease-in-out group",
-                activeId === course.id ? "lg:flex-[3] flex-[3]" : "lg:flex-[1] flex-[1] hover:flex-[1.2]"
+                activeId === course.id ? "flex-[3] lg:flex-[3]" : "flex-[1] lg:flex-[1] hover:flex-[1.2]"
               )}
             >
               {/* Background Image & Overlay */}
@@ -114,7 +114,7 @@ export function DistanceEducation() {
                    </div>
                    
                    <h3 className={cn(
-                     "font-serif font-bold mb-2 transition-all duration-300",
+                     "font-serif font-bold mb-2 transition-all duration-300 text-white",
                      activeId === course.id ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"
                    )}>
                      {course.title}

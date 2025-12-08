@@ -168,25 +168,25 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                   <div className="space-y-2">
                      <Label htmlFor="name">Full Name</Label>
-                     <Input id="name" placeholder="John Doe" className="rounded-xl border-border/50 bg-secondary/10 focus:bg-white transition-colors" />
+                     <Input id="name" placeholder="John Doe" className="w-full rounded-xl border-border/50 bg-secondary/10 focus:bg-white transition-colors h-11 md:h-10" />
                   </div>
                   
                   <div className="space-y-2">
                      <Label htmlFor="email">Email Address</Label>
-                     <Input id="email" type="email" placeholder="john@example.com" className="rounded-xl border-border/50 bg-secondary/10 focus:bg-white transition-colors" />
+                     <Input id="email" type="email" placeholder="john@example.com" className="w-full rounded-xl border-border/50 bg-secondary/10 focus:bg-white transition-colors h-11 md:h-10" />
                   </div>
 
                   <div className="space-y-2">
                      <Label htmlFor="phone">Phone Number</Label>
-                     <Input id="phone" type="tel" placeholder="+91 98765 43210" className="rounded-xl border-border/50 bg-secondary/10 focus:bg-white transition-colors" />
+                     <Input id="phone" type="tel" placeholder="+91 98765 43210" className="w-full rounded-xl border-border/50 bg-secondary/10 focus:bg-white transition-colors h-11 md:h-10" />
                   </div>
 
                   <div className="space-y-2">
                      <Label htmlFor="message">Why do you want to join?</Label>
-                     <Textarea id="message" placeholder="Tell us briefly about your educational background..." className="rounded-xl border-border/50 bg-secondary/10 focus:bg-white transition-colors min-h-[100px]" />
+                     <Textarea id="message" placeholder="Tell us briefly about your educational background..." className="w-full rounded-xl border-border/50 bg-secondary/10 focus:bg-white transition-colors min-h-[100px]" />
                   </div>
 
-                  <Button type="submit" className="w-full bg-brand-orange text-white hover:bg-brand-orange/90 rounded-xl h-12 font-bold text-lg shadow-lg shadow-brand-orange/20 mt-4">
+                  <Button type="submit" className="w-full bg-brand-orange text-white hover:bg-brand-orange/90 rounded-xl h-12 md:h-11 font-bold text-lg md:text-base shadow-lg shadow-brand-orange/20 mt-4">
                      Submit Application
                   </Button>
                </form>
