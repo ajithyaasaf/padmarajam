@@ -87,17 +87,13 @@ export function AboutSection() {
                  </footer>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                 <div className="space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">
-                       Padmarajam Institute of Management (PRIM) isn't just a coaching center; it's a launchpad. Founded with a vision to create quality professionals, we've become the gold standard for commerce education in Tamil Nadu.
-                    </p>
-                 </div>
-                 <div className="space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">
-                       We blend rigorous academic training with holistic personality development. Our students don't just pass exams; they lead industries.
-                    </p>
-                 </div>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-10">
+                 <p>
+                    Padmarajam Institute of Management (PRIM) isn't just a coaching center; it's a launchpad. Founded with a vision to create quality professionals, we've become the gold standard for commerce education in Tamil Nadu.
+                 </p>
+                 <p>
+                    We blend rigorous academic training with holistic personality development. Our students don't just pass exams; they lead industries.
+                 </p>
               </div>
 
               {/* Stats / Badges */}
