@@ -98,7 +98,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
              )} />
              
              <div className={cn(
-               "flex items-center gap-2 text-sm font-bold uppercase tracking-wider mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300",
+               "flex items-center gap-2 text-sm font-bold uppercase tracking-wider mt-4 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300",
                isFeatured || isDark ? "text-white" : "text-brand-purple"
              )}>
                 View Details & Apply <ArrowRight className="h-4 w-4" />
@@ -107,7 +107,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
         </motion.div>
       </DialogTrigger>
       
-      <DialogContent className="w-[95vw] sm:max-w-[800px] max-h-[90vh] overflow-y-auto bg-white p-0 gap-0 border-none rounded-2xl md:rounded-[2rem] shadow-2xl">
+      <DialogContent className="w-[95vw] sm:max-w-[800px] max-h-[90vh] overflow-y-auto bg-white p-0 gap-0 border-none rounded-2xl md:rounded-[2rem] shadow-2xl [&>button]:text-white md:[&>button]:text-zinc-500 [&>button]:top-4 [&>button]:right-4 [&>button]:z-50 [&>button]:bg-black/20 md:[&>button]:bg-transparent [&>button]:p-1 [&>button]:rounded-full">
          <div className="grid grid-cols-1 md:grid-cols-2">
             
             {/* Left: Video & Info */}
