@@ -38,7 +38,7 @@
   --color-brand-orange: hsl(var(--brand-orange));
   --color-brand-blue: hsl(var(--brand-blue));
   
-  --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-sans: "Poppins", "Plus Jakarta Sans", "Inter", sans-serif;
   --font-serif: "Playfair Display", "Merriweather", serif;
 }
 
@@ -141,7 +141,7 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-bold tracking-tight text-primary;
+    @apply font-sans font-bold tracking-tight text-primary;
   }
 }
 
