@@ -223,12 +223,12 @@ export function CourseGrid() {
           
           {/* CA - The Anchor Card */}
           <CourseCard
-            title="Chartered Accountancy"
+            title="CA"
             subtitle="The Gold Standard"
             description="Comprehensive coaching from Foundation to Final. Integrated curriculum for exam success."
             icon={BookOpen}
             className="md:col-span-2 min-h-[400px]"
-            variant="featured"
+            variant="default"
             delay={0.1}
           />
 
