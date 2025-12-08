@@ -60,106 +60,69 @@ export function ProcessSteps() {
         </div>
 
         {/* Desktop Journey Line */}
-        <div className="hidden lg:block relative max-w-6xl mx-auto min-h-[600px]">
+        <div className="hidden lg:block relative max-w-6xl mx-auto py-20">
           {/* Main Horizontal Line */}
-          <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-blue-100 via-purple-100 to-green-100 -translate-y-1/2 rounded-full" />
+          <div className="absolute top-24 left-0 w-full h-1 bg-gradient-to-r from-blue-100 via-purple-100 to-green-100 rounded-full" />
           
-          <div className="grid grid-cols-4 gap-8 h-full">
+          <div className="grid grid-cols-4 gap-8">
             {steps.map((step, index) => (
-              <div key={step.id} className="relative h-full flex flex-col">
-                {/* Center Node (Absolute) */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+              <div key={step.id} className="relative flex flex-col items-center">
+                {/* Number Node (On the line) */}
+                <div className="z-20 mb-8">
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.2 + 0.2, type: "spring" }}
+                    transition={{ delay: index * 0.2, type: "spring" }}
                     className={cn(
-                      "w-12 h-12 rounded-full border-4 border-white shadow-xl flex items-center justify-center text-white font-bold text-lg transition-transform hover:scale-110 duration-300",
-                      step.color
+                      "w-12 h-12 rounded-full border-4 border-white shadow-xl flex items-center justify-center text-white font-bold text-lg transition-transform hover:scale-110 duration-300 relative bg-white",
                     )}
                   >
-                    {step.id}
+                    <div className={cn("w-full h-full rounded-full flex items-center justify-center", step.color)}>
+                      {step.id}
+                    </div>
                   </motion.div>
                 </div>
 
-                {/* Top Half */}
-                <div className="flex-1 flex flex-col justify-end items-center pb-16">
-                  {index % 2 !== 0 && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.2 }}
-                      className="flex flex-col items-center w-full"
-                    >
-                      {/* Card */}
-                      <div className={cn(
-                        "relative group w-full bg-white p-8 rounded-3xl border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                      )}>
-                        {/* Blob */}
-                        <div className={cn("absolute top-0 right-0 w-24 h-24 rounded-bl-[4rem] opacity-10 transition-opacity group-hover:opacity-20", step.color)} />
-                        
-                        <div className={cn(
-                          "w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl",
-                          step.lightColor
-                        )}>
-                          <step.icon className="w-7 h-7" />
-                        </div>
+                {/* Vertical Connector */}
+                <motion.div 
+                  initial={{ height: 0 }}
+                  whileInView={{ height: 48 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                  className="w-0.5 bg-border/60 absolute top-28"
+                />
 
-                        <h3 className="font-serif text-2xl font-bold text-brand-purple mb-3 group-hover:text-brand-orange transition-colors">
-                          {step.title}
-                        </h3>
-                        
-                        <p className="text-muted-foreground leading-relaxed text-sm">
-                          {step.description}
-                        </p>
-                      </div>
-                      
-                      {/* Connector */}
-                      <div className="w-0.5 bg-border/60 h-16 mt-0" />
-                    </motion.div>
-                  )}
-                </div>
+                {/* Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
+                  className="w-full pt-16"
+                >
+                  <div className={cn(
+                    "relative group w-full bg-white p-8 rounded-3xl border border-border/50 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col items-center text-center"
+                  )}>
+                    {/* Blob */}
+                    <div className={cn("absolute top-0 right-0 w-24 h-24 rounded-bl-[4rem] opacity-10 transition-opacity group-hover:opacity-20", step.color)} />
+                    
+                    <div className={cn(
+                      "w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl shrink-0",
+                      step.lightColor
+                    )}>
+                      <step.icon className="w-7 h-7" />
+                    </div>
 
-                {/* Bottom Half */}
-                <div className="flex-1 flex flex-col justify-start items-center pt-16">
-                  {index % 2 === 0 && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.2 }}
-                      className="flex flex-col items-center w-full"
-                    >
-                      {/* Connector */}
-                      <div className="w-0.5 bg-border/60 h-16 mb-0" />
-
-                      {/* Card */}
-                      <div className={cn(
-                        "relative group w-full bg-white p-8 rounded-3xl border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                      )}>
-                        {/* Blob */}
-                        <div className={cn("absolute top-0 right-0 w-24 h-24 rounded-bl-[4rem] opacity-10 transition-opacity group-hover:opacity-20", step.color)} />
-                        
-                        <div className={cn(
-                          "w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl",
-                          step.lightColor
-                        )}>
-                          <step.icon className="w-7 h-7" />
-                        </div>
-
-                        <h3 className="font-serif text-2xl font-bold text-brand-purple mb-3 group-hover:text-brand-orange transition-colors">
-                          {step.title}
-                        </h3>
-                        
-                        <p className="text-muted-foreground leading-relaxed text-sm">
-                          {step.description}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </div>
+                    <h3 className="font-serif text-2xl font-bold text-brand-purple mb-3 group-hover:text-brand-orange transition-colors">
+                      {step.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {step.description}
+                    </p>
+                  </div>
+                </motion.div>
               </div>
             ))}
           </div>
