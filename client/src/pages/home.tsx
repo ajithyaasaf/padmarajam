@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/home/Hero";
 import { StatsBar } from "@/components/home/StatsBar";
+import { AboutSection } from "@/components/home/AboutSection";
 import { CourseGrid } from "@/components/home/CourseGrid";
 import { ValueStack } from "@/components/home/ValueStack";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <StatsBar />
+        <AboutSection />
         <CourseGrid />
         <ValueStack />
         <Testimonials />
