@@ -60,64 +60,107 @@ export function ProcessSteps() {
         </div>
 
         {/* Desktop Journey Line */}
-        <div className="hidden lg:block relative max-w-6xl mx-auto">
-          {/* Connecting Line */}
+        <div className="hidden lg:block relative max-w-6xl mx-auto min-h-[600px]">
+          {/* Main Horizontal Line */}
           <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-blue-100 via-purple-100 to-green-100 -translate-y-1/2 rounded-full" />
           
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-4 gap-8 h-full">
             {steps.map((step, index) => (
-              <motion.div
-                key={step.id}
-                initial={{ opacity: 0, y: index % 2 === 0 ? 50 : -50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={cn(
-                  "relative flex flex-col items-center",
-                  index % 2 === 0 ? "pt-32" : "pb-32 flex-col-reverse"
-                )}
-              >
-                {/* Center Node */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                  <div className={cn(
-                    "w-12 h-12 rounded-full border-4 border-white shadow-xl flex items-center justify-center text-white font-bold text-lg transition-transform hover:scale-110 duration-300",
-                    step.color
-                  )}>
+              <div key={step.id} className="relative h-full flex flex-col">
+                {/* Center Node (Absolute) */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2 + 0.2, type: "spring" }}
+                    className={cn(
+                      "w-12 h-12 rounded-full border-4 border-white shadow-xl flex items-center justify-center text-white font-bold text-lg transition-transform hover:scale-110 duration-300",
+                      step.color
+                    )}
+                  >
                     {step.id}
-                  </div>
+                  </motion.div>
                 </div>
 
-                {/* Content Card */}
-                <div className={cn(
-                  "relative group w-full bg-white p-8 rounded-3xl border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2",
-                  index % 2 === 0 ? "mt-24" : "mb-24"
-                )}>
-                  {/* Decorative Blob */}
-                  <div className={cn("absolute top-0 right-0 w-24 h-24 rounded-bl-[4rem] opacity-10 transition-opacity group-hover:opacity-20", step.color)} />
+                {/* Top Half */}
+                <div className="flex-1 flex flex-col justify-end items-center pb-16">
+                  {index % 2 !== 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.2 }}
+                      className="flex flex-col items-center w-full"
+                    >
+                      {/* Card */}
+                      <div className={cn(
+                        "relative group w-full bg-white p-8 rounded-3xl border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                      )}>
+                        {/* Blob */}
+                        <div className={cn("absolute top-0 right-0 w-24 h-24 rounded-bl-[4rem] opacity-10 transition-opacity group-hover:opacity-20", step.color)} />
+                        
+                        <div className={cn(
+                          "w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl",
+                          step.lightColor
+                        )}>
+                          <step.icon className="w-7 h-7" />
+                        </div>
 
-                  <div className={cn(
-                    "w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl",
-                    step.lightColor
-                  )}>
-                    <step.icon className="w-7 h-7" />
-                  </div>
-
-                  <h3 className="font-serif text-2xl font-bold text-brand-purple mb-3 group-hover:text-brand-orange transition-colors">
-                    {step.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    {step.description}
-                  </p>
+                        <h3 className="font-serif text-2xl font-bold text-brand-purple mb-3 group-hover:text-brand-orange transition-colors">
+                          {step.title}
+                        </h3>
+                        
+                        <p className="text-muted-foreground leading-relaxed text-sm">
+                          {step.description}
+                        </p>
+                      </div>
+                      
+                      {/* Connector */}
+                      <div className="w-0.5 bg-border/60 h-16 mt-0" />
+                    </motion.div>
+                  )}
                 </div>
 
-                {/* Vertical Connector Line to Card */}
-                <div className={cn(
-                  "absolute left-1/2 -translate-x-1/2 w-0.5 bg-border/60 h-24",
-                  index % 2 === 0 ? "top-1/2 mt-6" : "bottom-1/2 mb-6"
-                )} />
+                {/* Bottom Half */}
+                <div className="flex-1 flex flex-col justify-start items-center pt-16">
+                  {index % 2 === 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.2 }}
+                      className="flex flex-col items-center w-full"
+                    >
+                      {/* Connector */}
+                      <div className="w-0.5 bg-border/60 h-16 mb-0" />
 
-              </motion.div>
+                      {/* Card */}
+                      <div className={cn(
+                        "relative group w-full bg-white p-8 rounded-3xl border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                      )}>
+                        {/* Blob */}
+                        <div className={cn("absolute top-0 right-0 w-24 h-24 rounded-bl-[4rem] opacity-10 transition-opacity group-hover:opacity-20", step.color)} />
+                        
+                        <div className={cn(
+                          "w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl",
+                          step.lightColor
+                        )}>
+                          <step.icon className="w-7 h-7" />
+                        </div>
+
+                        <h3 className="font-serif text-2xl font-bold text-brand-purple mb-3 group-hover:text-brand-orange transition-colors">
+                          {step.title}
+                        </h3>
+                        
+                        <p className="text-muted-foreground leading-relaxed text-sm">
+                          {step.description}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
         </div>
