@@ -9,7 +9,7 @@ export function StatsBar() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto">
           {/* 1. LEFT PANEL */}
-          <div className="hidden md:flex bg-white border border-border p-6 md:p-6 rounded-l-[2rem] flex-1 w-full md:w-auto text-right pr-12 shadow-sm items-center justify-end">
+          <div className="hidden md:flex bg-white border border-border p-6 md:p-6 rounded-l-[2rem] flex-1 w-full md:w-auto text-right pr-24 shadow-sm items-center justify-end">
             <div>
               <h3 className="font-serif font-bold text-xl text-brand-purple mb-0.5">
                 30+ Years of Excellence
@@ -48,7 +48,7 @@ export function StatsBar() {
           </div>
 
           {/* 3. RIGHT PANEL */}
-          <div className="hidden md:flex bg-white border border-border p-6 md:p-6 rounded-r-[2rem] flex-1 w-full md:w-auto text-left pl-12 shadow-sm items-center">
+          <div className="hidden md:flex bg-white border border-border p-6 md:p-6 rounded-r-[2rem] flex-1 w-full md:w-auto text-left pl-24 shadow-sm items-center">
             <div className="flex flex-col items-start">
               <div className="flex gap-2 items-center text-yellow-500 mb-0.5">
                 <CheckCircle2 className="h-5 w-5 fill-current" />
