@@ -23,7 +23,41 @@ export function AboutSection() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Side: Typography & Content (7 Cols) */}
+          {/* Left Side: Creative Image Composition (5 Cols) */}
+          <div className="lg:col-span-5 relative order-last lg:order-first">
+             <motion.div style={{ y: y1 }} className="relative z-10">
+                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                   <div className="absolute inset-0 bg-gradient-to-tr from-brand-purple/40 to-transparent mix-blend-multiply z-10" />
+                   <img 
+                      src={founderImage} 
+                      alt="Mr. PA. Balan" 
+                      className="w-full h-auto object-cover scale-110"
+                   />
+                </div>
+                
+                {/* Floating Elements */}
+                <motion.div 
+                   style={{ y: y2, rotate: rotate }}
+                   className="absolute -bottom-10 -right-10 bg-brand-orange text-white p-8 rounded-[2rem] shadow-xl z-20 max-w-[200px]"
+                >
+                   <div className="text-4xl font-serif font-bold mb-2">30+</div>
+                   <div className="text-sm font-medium opacity-90 leading-tight">Years of Educational Excellence</div>
+                </motion.div>
+
+                <div className="absolute -top-10 -left-10 -z-10">
+                    <svg width="200" height="200" viewBox="0 0 200 200" className="animate-[spin_20s_linear_infinite]">
+                        <path id="curve" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" />
+                        <text className="text-xs font-bold tracking-[0.2em] fill-brand-purple/20 uppercase">
+                            <textPath href="#curve">
+                                Padmarajam Institute of Management • Est. 1990 •
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+             </motion.div>
+          </div>
+
+          {/* Right Side: Typography & Content (7 Cols) */}
           <div className="lg:col-span-7 relative z-20">
             <motion.div 
               initial={{ opacity: 0, y: 50 }}
@@ -79,40 +113,6 @@ export function AboutSection() {
                  </div>
               </div>
             </motion.div>
-          </div>
-
-          {/* Right Side: Creative Image Composition (5 Cols) */}
-          <div className="lg:col-span-5 relative">
-             <motion.div style={{ y: y1 }} className="relative z-10">
-                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
-                   <div className="absolute inset-0 bg-gradient-to-tr from-brand-purple/40 to-transparent mix-blend-multiply z-10" />
-                   <img 
-                      src={founderImage} 
-                      alt="Mr. PA. Balan" 
-                      className="w-full h-auto object-cover scale-110"
-                   />
-                </div>
-                
-                {/* Floating Elements */}
-                <motion.div 
-                   style={{ y: y2, rotate: rotate }}
-                   className="absolute -bottom-10 -left-10 bg-brand-orange text-white p-8 rounded-[2rem] shadow-xl z-20 max-w-[200px]"
-                >
-                   <div className="text-4xl font-serif font-bold mb-2">30+</div>
-                   <div className="text-sm font-medium opacity-90 leading-tight">Years of Educational Excellence</div>
-                </motion.div>
-
-                <div className="absolute -top-10 -right-10 -z-10">
-                    <svg width="200" height="200" viewBox="0 0 200 200" className="animate-[spin_20s_linear_infinite]">
-                        <path id="curve" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" />
-                        <text className="text-xs font-bold tracking-[0.2em] fill-brand-purple/20 uppercase">
-                            <textPath href="#curve">
-                                Padmarajam Institute of Management • Est. 1990 •
-                            </textPath>
-                        </text>
-                    </svg>
-                </div>
-             </motion.div>
           </div>
 
         </div>
