@@ -30,9 +30,9 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <a className="flex items-center gap-3 group h-16">
+          <div className="flex items-center gap-3 group h-16 cursor-pointer">
              <img src={logo} alt="PRIM Logo" className="h-full w-auto object-contain" />
-          </a>
+          </div>
         </Link>
 
         {/* Desktop Menu */}
