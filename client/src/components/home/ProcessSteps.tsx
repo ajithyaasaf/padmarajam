@@ -90,7 +90,7 @@ export function ProcessSteps() {
                 {/* Content Card */}
                 <div className={cn(
                   "relative group w-full bg-white p-8 rounded-3xl border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2",
-                  index % 2 === 0 ? "mt-8" : "mb-8"
+                  index % 2 === 0 ? "mt-24" : "mb-24"
                 )}>
                   {/* Decorative Blob */}
                   <div className={cn("absolute top-0 right-0 w-24 h-24 rounded-bl-[4rem] opacity-10 transition-opacity group-hover:opacity-20", step.color)} />
@@ -113,7 +113,7 @@ export function ProcessSteps() {
 
                 {/* Vertical Connector Line to Card */}
                 <div className={cn(
-                  "absolute left-1/2 -translate-x-1/2 w-0.5 bg-border/60 h-8",
+                  "absolute left-1/2 -translate-x-1/2 w-0.5 bg-border/60 h-24",
                   index % 2 === 0 ? "top-1/2 mt-6" : "bottom-1/2 mb-6"
                 )} />
 
