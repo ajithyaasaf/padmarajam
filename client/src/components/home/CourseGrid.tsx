@@ -38,7 +38,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
           transition={{ duration: 0.6, delay }}
           className={cn(
             "group relative overflow-hidden rounded-[2rem] p-8 md:p-10 flex flex-col justify-between transition-all duration-500 cursor-pointer",
-            isFeatured ? "bg-brand-purple text-white" : "bg-gradient-to-br from-white to-brand-purple/5 border border-brand-purple/10 hover:border-brand-orange/50",
+            isFeatured ? "bg-brand-blue text-white" : "bg-brand-blue text-white",
             isDark ? "bg-brand-blue text-white" : "",
             "hover:shadow-2xl hover:shadow-brand-purple/10 hover:scale-[1.02]",
             className
@@ -53,14 +53,14 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
             <div className="flex justify-between items-start mb-8">
               <div className={cn(
                 "h-16 w-16 rounded-2xl flex items-center justify-center text-2xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3",
-                isFeatured || isDark ? "bg-white/10 text-white backdrop-blur-sm" : "bg-brand-purple/10 text-brand-purple"
+                "bg-white/10 text-white backdrop-blur-sm"
               )}>
                 <Icon className="h-8 w-8" />
               </div>
               
               <div className={cn(
                 "h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0",
-                isFeatured || isDark ? "bg-white/20 text-white" : "bg-brand-orange text-white"
+                "bg-white/20 text-white"
               )}>
                 <ArrowUpRight className="h-5 w-5" />
               </div>
@@ -69,7 +69,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
             {subtitle && (
               <span className={cn(
                 "text-xs font-bold tracking-widest uppercase mb-2 block",
-                isFeatured || isDark ? "text-white/60" : "text-brand-orange"
+                "text-white/60"
               )}>
                 {subtitle}
               </span>
@@ -78,14 +78,14 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
             <h3 className={cn(
               "font-sans font-bold mb-4 leading-tight",
               isFeatured ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl",
-              isFeatured || isDark ? "text-white" : "text-brand-purple"
+              "text-white"
             )}>
               {title}
             </h3>
             
             <p className={cn(
               "leading-relaxed text-lg max-w-md",
-              isFeatured || isDark ? "text-white/80" : "text-muted-foreground"
+              "text-white/80"
             )}>
               {description}
             </p>
@@ -94,12 +94,12 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
           <div className="mt-8 relative z-10 flex items-center justify-between">
              <div className={cn(
                  "h-[1px] w-full transition-all duration-500 origin-left scale-x-0 group-hover:scale-x-100 absolute top-0",
-                 isFeatured || isDark ? "bg-white/30" : "bg-brand-orange"
+                 "bg-white/30"
              )} />
              
              <div className={cn(
                "flex items-center gap-2 text-sm font-bold uppercase tracking-wider mt-4 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300",
-               isFeatured || isDark ? "text-white" : "text-brand-purple"
+               "text-white"
              )}>
                 View Details & Apply <ArrowRight className="h-4 w-4" />
              </div>
