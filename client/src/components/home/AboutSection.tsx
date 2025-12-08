@@ -12,7 +12,7 @@ export function AboutSection() {
 
   const y1 = useTransform(scrollYProgress, [0, 1], [100, -100]);
   const y2 = useTransform(scrollYProgress, [0, 1], [50, -50]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 10]);
+  // Removed rotate animation as per request
 
   return (
     <section className="py-32 bg-secondary/10 overflow-hidden relative" id="about" ref={containerRef}>
@@ -31,17 +31,17 @@ export function AboutSection() {
                    <img 
                       src={founderImage} 
                       alt="Mr. PA. Balan" 
-                      className="w-full h-auto object-cover scale-110"
+                      className="w-full h-auto object-cover scale-150 object-top translate-y-12"
                    />
                 </div>
                 
                 {/* Floating Elements */}
                 <motion.div 
-                   style={{ y: y2, rotate: rotate }}
-                   className="absolute -bottom-10 -right-10 bg-brand-orange text-white p-8 rounded-[2rem] shadow-xl z-20 max-w-[200px]"
+                   style={{ y: y2 }}
+                   className="absolute -bottom-6 -right-6 bg-brand-orange text-white p-6 rounded-2xl shadow-xl z-20 max-w-[160px]"
                 >
-                   <div className="text-4xl font-sans font-bold mb-2">30+</div>
-                   <div className="text-sm font-medium opacity-90 leading-tight">Years of Educational Excellence</div>
+                   <div className="text-3xl font-sans font-bold mb-1">30+</div>
+                   <div className="text-xs font-medium opacity-90 leading-tight">Years of Educational Excellence</div>
                 </motion.div>
 
                 <div className="absolute -top-10 -left-10 -z-10">
