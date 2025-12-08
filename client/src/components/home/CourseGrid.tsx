@@ -107,11 +107,11 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
         </motion.div>
       </DialogTrigger>
       
-      <DialogContent className="sm:max-w-[800px] bg-white p-0 overflow-hidden gap-0 border-none rounded-[2rem] shadow-2xl">
+      <DialogContent className="w-[95vw] sm:max-w-[800px] max-h-[90vh] overflow-y-auto bg-white p-0 gap-0 border-none rounded-2xl md:rounded-[2rem] shadow-2xl">
          <div className="grid grid-cols-1 md:grid-cols-2">
             
             {/* Left: Video & Info */}
-            <div className="bg-brand-purple p-8 text-white flex flex-col justify-between relative overflow-hidden">
+            <div className="bg-brand-purple p-6 md:p-8 text-white flex flex-col justify-between relative overflow-hidden">
                {/* Background Accents */}
                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
                
@@ -157,8 +157,8 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
             </div>
 
             {/* Right: Application Form */}
-            <div className="p-8 bg-white">
-               <DialogHeader className="mb-6">
+            <div className="p-6 md:p-8 bg-white">
+               <DialogHeader className="mb-6 text-left">
                  <DialogTitle className="text-2xl font-serif font-bold text-brand-purple">Apply Now</DialogTitle>
                  <DialogDescription>
                    Fill out the form below to register your interest for {title}.
