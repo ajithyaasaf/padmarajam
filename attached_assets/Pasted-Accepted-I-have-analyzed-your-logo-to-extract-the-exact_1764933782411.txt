@@ -1,0 +1,115 @@
+Accepted. I have analyzed your logo to extract the exact color psychology needed for a premium, non-template look.
+
+The Color Palette Strategy (Based on Logo):
+
+Deep Royal Purple (Primary): From the "Padmarajam" text. Represents Wisdom, Royalty, and Ambition. Use this for Headers and Footer.
+
+Persimmon Orange (Accent/CTA): From the shield's top-left. Represents Energy and Action. Use this only for Buttons ("Call Now", "Enroll").
+
+Slate Blue (Secondary): From the shield's bottom. Represents Trust and Intelligence. Use this for background accents or icons.
+
+Silver/Grey (Neutral): From the shield. Use for borders and card backgrounds.
+
+Here is the Master Prompt. You can give this to a developer, a UI designer, or an advanced AI site builder (like Framer AI, Elementor AI, or v0.dev).
+
+The Master Prompt: "The Authority" Landing Page
+Role: You are a Senior UI/UX Designer and Conversion Copywriter specializing in High-End Educational Institutions. Project: Design the Homepage for "Padmarajam Institute of Management (PRIM)." Brand Identity: Established 1995. Premium. Serious. Academic. Visual Style: Modern Professional (NOT generic corporate bootstrap). Clean typography, Bento-grid layouts, and high-contrast calls to action.
+
+1. Visual & Color Guidelines (Strict Adherence)
+Primary Background: Clean White (#FFFFFF) or very soft Off-White (#F8F9FA) to allow the content to breathe.
+
+Typography:
+
+Headings: 'Playfair Display' or 'Merriweather' (Serif) – to signal History and Prestige (Est. 1995).
+
+Body: 'Inter' or 'Plus Jakarta Sans' (Sans-Serif) – for high readability and modern feel.
+
+Color Palette (Derived from Logo):
+
+Dominant Brand Color: Deep Royal Purple (Hex: #4A154B) – Use for the Navbar, Footer, and Main Headings.
+
+Action Color (Buttons): Vibrant Persimmon Orange (Hex: #F26522) – Use for "Book Counselling" and "Call Now" buttons. High visibility.
+
+Trust Color: Deep Slate Blue (Hex: #005696) – Use for icon backgrounds and "Trust Badges" (ISO Certified).
+
+2. UI Layout & Copy Structure
+A. Sticky Navbar (Glassmorphism Effect)
+
+Logo: Left aligned (PRIM Logo).
+
+Menu: "Courses" | "Faculty" | "Success Stories" | "Campus".
+
+CTA Button: "Student Login" (Outline style) & "Admissions Open" (Solid Orange Pill shape).
+
+B. The "Impact" Hero Section (Above the Fold)
+
+Layout: Split screen (Text Left, Image Right) OR Center Focus.
+
+Headline (H1): "Forging Financial Leaders Since 1995." (Use Deep Purple).
+
+Sub-headline: "Madurai’s premier destination for CA, CMA, and ACCA. Join the institute that blends academic discipline with professional mastery."
+
+Visual: A high-quality image of a student studying in the actual PRIM library (peaceful, book-filled). Do not use stock photos of people pointing at whiteboards.
+
+Primary CTA: "Get Free Career Counselling" (Orange Button, Shadow effect).
+
+Trust Ticker (Below Hero): "ISO Certified | Recognized by TNOU | 3 Decades of Excellence."
+
+C. The "Core 4" Course Grid (Bento Box Style)
+
+Design Instruction: Do not use a boring list. Use a "Bento Grid" layout (hover effects on cards).
+
+Card 1 (Large - Focus): Chartered Accountancy (CA). Text: "Foundation to Final. The gold standard of finance."
+
+Card 2: CMA (India/US). Text: "Master Cost & Management Accounting."
+
+Card 3: ACCA (Global). Text: "Your passport to an international career."
+
+Card 4: Company Secretary (CS). Text: "Corporate Law & Governance excellence."
+
+D. The "Why PRIM?" Value Stack (Icons + Text)
+
+Layout: 3-Column Section.
+
+Icon 1 (Book/Library): "The Goripalayam Advantage"
+
+Copy: "Located centrally on Kalpalam Road. Access our exclusive library and computer labs designed for distraction-free deep work."
+
+Icon 2 (Mentor): "Mentorship, Not Just Teaching"
+
+Copy: "Learn from practicing CAs and industry veterans who guide you beyond the textbook."
+
+Icon 3 (Shield): "Integrated Success"
+
+Copy: "Save time with our Dual-Path Strategy: Earn your B.Com degree while preparing for your Professional exams."
+
+E. Social Proof & Results (The "Trust" Section)
+
+Design: A horizontal scrolling carousel of student photos with their "Pass Certificate" screenshots.
+
+Headline: "We Let Our Results Speak."
+
+Review Integration: Embed a live Google Review widget (Show 4.5+ star reviews only). Highlight reviews that mention "Library," "Environment," and "Passing Exams."
+
+F. Footer (The Authority Anchor)
+
+Background: Deep Royal Purple. Text: White.
+
+Column 1: Logo + "Run by Padmarajam Trust."
+
+Column 2 (Quick Links): CA Course | ACCA | CMA | Contact.
+
+Column 3 (Contact):
+
+Address: No.10, Kalpalam Road, Goripalayam, Madurai - 625002.
+
+Phone: +91 93441 08771.
+
+Bottom Bar: © 2025 Padmarajam Institute of Management.
+
+3. Developer / AI Instructions
+Mobile Responsiveness: The "Call Now" button must be sticky at the bottom on mobile devices.
+
+Speed: Use WebP format for images to ensure the site loads under 2 seconds.
+
+Micro-interactions: Add subtle hover animations to the Course Cards (e.g., slight lift and shadow increase) to make the UI feel premium.
