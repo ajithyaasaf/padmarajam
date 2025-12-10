@@ -224,7 +224,7 @@ export function CourseGrid() {
           {/* CA - The Anchor Card */}
           <CourseCard
             title="CA"
-            subtitle="The Gold Standard"
+            subtitle="Strategic Finance"
             description="Comprehensive coaching from Foundation to Final. Integrated curriculum for exam success."
             icon={BookOpen}
             className="md:col-span-2 min-h-[400px]"
@@ -256,7 +256,7 @@ export function CourseGrid() {
            {/* CMA (India/US) */}
            <CourseCard
             title="CMA (India/US)"
-            subtitle="Strategic Finance"
+            subtitle="The Gold Standard"
             description="Master strategic financial management for global enterprises."
             icon={Award}
             className="md:col-span-1"
