@@ -8,168 +8,157 @@ import {
   FileCheck, 
   UsersRound, 
   Heart, 
-  Lightbulb 
+  Lightbulb,
+  Sparkles,
+  Trophy,
+  Target
 } from "lucide-react";
 
 const benefits = [
-  {
-    title: "30 Years in Finance Education",
-    proof: "Trusted by 50,000+ successful graduates",
-    icon: GraduationCap,
-    theme: "legacy"
-  },
-  {
-    title: "Professional Faculties",
-    proof: "Industry experts with real-world experience",
-    icon: Users,
-    theme: "expertise"
-  },
-  {
-    title: "Flexible Learning Schedule",
-    proof: "Study without disrupting your academics",
-    icon: Clock,
-    theme: "convenience"
-  },
-  {
-    title: "AI Smart Class",
-    proof: "Next-gen tech-powered learning environment",
-    icon: Cpu,
-    theme: "innovation"
-  },
-  {
-    title: "Daily & Weekend Classes",
-    proof: "Choose timings that work for you",
-    icon: Calendar,
-    theme: "flexibility"
-  },
-  {
-    title: "Top-Quality Study Materials",
-    proof: "Curated content aligned with latest syllabus",
-    icon: BookOpen,
-    theme: "resources"
-  },
-  {
-    title: "Regular Mock Tests",
-    proof: "Track progress & build exam confidence",
-    icon: FileCheck,
-    theme: "preparation"
-  },
-  {
-    title: "Separate Batches",
-    proof: "Small groups for personalized attention",
-    icon: UsersRound,
-    theme: "focus"
-  },
-  {
-    title: "Friendly Environment",
-    proof: "Supportive community that motivates success",
-    icon: Heart,
-    theme: "culture"
-  },
-  {
-    title: "Concept-Based Smart Study",
-    proof: "Master fundamentals, not just memorize",
-    icon: Lightbulb,
-    theme: "methodology"
-  }
+  { title: "30 Years in Finance Education", icon: GraduationCap, stat: "30+", label: "Years" },
+  { title: "Professional Faculties", icon: Users, stat: "50+", label: "Experts" },
+  { title: "Flexible Learning Schedule", icon: Clock, stat: "24/7", label: "Access" },
+  { title: "AI Smart Class", icon: Cpu, stat: "100%", label: "Tech-Driven" },
+  { title: "Daily & Weekend Classes", icon: Calendar, stat: "7", label: "Days/Week" },
+  { title: "Top-Quality Study Materials", icon: BookOpen, stat: "500+", label: "Resources" },
+  { title: "Regular Mock Tests", icon: FileCheck, stat: "100+", label: "Tests/Year" },
+  { title: "Separate Batches", icon: UsersRound, stat: "20", label: "Max Students" },
+  { title: "Friendly Environment", icon: Heart, stat: "98%", label: "Satisfaction" },
+  { title: "Concept-Based Smart Study", icon: Lightbulb, stat: "5x", label: "Faster Learning" }
 ];
 
 export function CourseBenefits() {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-brand-orange/5" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto px-4 max-w-6xl relative z-10">
-        <div className="text-center mb-20">
-          <span className="inline-block bg-gradient-to-r from-primary to-accent text-white text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full shadow-lg mb-6">
+    <section className="py-24 relative overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-accent">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-brand-orange/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/20 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium px-5 py-2 rounded-full mb-6">
+            <Sparkles className="w-4 h-4" />
+            <span>Why Choose PRIM</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
             The PRIM Advantage
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
-            Your Journey to Success
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-            Every step is designed to transform you into a finance professional
+          <p className="text-white/70 max-w-xl mx-auto text-lg">
+            Everything you need to become a successful finance professional
           </p>
         </div>
 
-        <div className="relative">
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2">
-            <div className="h-full w-full bg-gradient-to-b from-primary via-brand-orange to-primary rounded-full animate-pulse" />
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
+          <div 
+            className="col-span-2 row-span-2 group relative overflow-hidden rounded-md bg-gradient-to-br from-brand-orange to-brand-orange/80 p-6 md:p-8"
+            data-testid="benefit-hero-card"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+            <Trophy className="w-12 h-12 text-white/90 mb-4" />
+            <div className="text-6xl md:text-7xl font-black text-white mb-2">30+</div>
+            <div className="text-white/90 text-xl font-semibold mb-2">Years of Excellence</div>
+            <p className="text-white/70 text-sm">India's most trusted finance education institute since 1994</p>
           </div>
 
-          <div className="space-y-8 md:space-y-0">
-            {benefits.map((benefit, index) => {
-              const isLeft = index % 2 === 0;
-              const Icon = benefit.icon;
-              
-              return (
-                <div
-                  key={index}
-                  className="relative md:grid md:grid-cols-[1fr_80px_1fr] md:gap-4 items-center"
-                  data-testid={`benefit-timeline-${index}`}
-                >
-                  <div className={`${isLeft ? 'md:col-start-1' : 'md:col-start-3'} ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
-                    <div 
-                      className={`
-                        group relative p-6 rounded-md bg-card border-2 border-transparent
-                        hover:border-brand-orange/40 hover:shadow-xl
-                        transition-all duration-500 hover-elevate overflow-visible
-                        ${isLeft ? 'md:mr-4' : 'md:ml-4'}
-                      `}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-brand-orange/5 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      
-                      <div className={`relative flex items-start gap-4 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
-                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                          <Icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div className={`flex-1 ${isLeft ? 'md:text-right' : ''}`}>
-                          <h3 className="font-bold text-foreground text-lg mb-1 group-hover:text-primary transition-colors">
-                            {benefit.title}
-                          </h3>
-                          <p className="text-sm text-muted-foreground">
-                            {benefit.proof}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          {benefits.slice(1, 5).map((benefit, index) => {
+            const Icon = benefit.icon;
+            return (
+              <div
+                key={index}
+                className="col-span-1 group relative overflow-hidden rounded-md bg-white/10 backdrop-blur-sm border border-white/10 p-4 md:p-5 hover:bg-white/20 transition-all duration-300"
+                data-testid={`benefit-card-${index + 1}`}
+              >
+                <Icon className="w-8 h-8 text-brand-orange mb-3 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-2xl font-bold text-white mb-1">{benefit.stat}</div>
+                <div className="text-white/60 text-xs uppercase tracking-wide mb-2">{benefit.label}</div>
+                <div className="text-white/90 text-sm font-medium leading-tight">{benefit.title}</div>
+              </div>
+            );
+          })}
 
-                  <div className="hidden md:flex md:col-start-2 justify-center items-center">
-                    <div className="relative">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-orange to-primary flex items-center justify-center text-white font-bold text-lg shadow-xl z-10 relative">
-                        {index + 1}
-                      </div>
-                      <div className="absolute inset-0 w-12 h-12 rounded-full bg-brand-orange/30 animate-ping" />
-                    </div>
-                  </div>
+          <div 
+            className="col-span-2 group relative overflow-hidden rounded-md bg-white p-6"
+            data-testid="benefit-ai-card"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                <Cpu className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <div className="text-3xl font-black text-primary">AI-Powered</div>
+                <div className="text-muted-foreground">Smart Learning Technology</div>
+              </div>
+            </div>
+          </div>
 
-                  {isLeft ? (
-                    <div className="hidden md:block md:col-start-3" />
-                  ) : (
-                    <div className="hidden md:block md:col-start-1" />
-                  )}
+          {benefits.slice(5, 8).map((benefit, index) => {
+            const Icon = benefit.icon;
+            return (
+              <div
+                key={index + 5}
+                className="col-span-1 group relative overflow-hidden rounded-md bg-white/10 backdrop-blur-sm border border-white/10 p-4 md:p-5 hover:bg-white/20 transition-all duration-300"
+                data-testid={`benefit-card-${index + 5}`}
+              >
+                <Icon className="w-8 h-8 text-brand-orange mb-3 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-2xl font-bold text-white mb-1">{benefit.stat}</div>
+                <div className="text-white/60 text-xs uppercase tracking-wide mb-2">{benefit.label}</div>
+                <div className="text-white/90 text-sm font-medium leading-tight">{benefit.title}</div>
+              </div>
+            );
+          })}
+
+          <div 
+            className="col-span-2 md:col-span-3 group relative overflow-hidden rounded-md bg-gradient-to-r from-white/20 to-white/5 backdrop-blur-sm border border-white/20 p-6"
+            data-testid="benefit-satisfaction-card"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4">
+              <div className="flex items-center gap-4">
+                <Heart className="w-10 h-10 text-brand-orange" />
+                <div>
+                  <div className="text-4xl font-black text-white">98%</div>
+                  <div className="text-white/70">Student Satisfaction</div>
                 </div>
-              );
-            })}
+              </div>
+              <div className="hidden md:block w-px h-12 bg-white/20" />
+              <div className="flex items-center gap-4">
+                <Target className="w-10 h-10 text-brand-orange" />
+                <div>
+                  <div className="text-4xl font-black text-white">50K+</div>
+                  <div className="text-white/70">Successful Alumni</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className="mt-20 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-brand-orange rounded-md opacity-90" />
-          <div className="relative px-8 py-10 text-center">
-            <p className="text-white/90 text-sm uppercase tracking-widest mb-3 font-medium">
-              Start Your Transformation Today
-            </p>
-            <h3 className="text-white text-2xl md:text-3xl font-bold mb-6">
-              Admissions Now Open for 2025 Batch
-            </h3>
+          {benefits.slice(8, 10).map((benefit, index) => {
+            const Icon = benefit.icon;
+            return (
+              <div
+                key={index + 8}
+                className="col-span-1 group relative overflow-hidden rounded-md bg-white/10 backdrop-blur-sm border border-white/10 p-4 md:p-5 hover:bg-white/20 transition-all duration-300"
+                data-testid={`benefit-card-${index + 8}`}
+              >
+                <Icon className="w-8 h-8 text-brand-orange mb-3 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-2xl font-bold text-white mb-1">{benefit.stat}</div>
+                <div className="text-white/60 text-xs uppercase tracking-wide mb-2">{benefit.label}</div>
+                <div className="text-white/90 text-sm font-medium leading-tight">{benefit.title}</div>
+              </div>
+            );
+          })}
+
+          <div 
+            className="col-span-2 md:col-span-2 group relative overflow-hidden rounded-md bg-brand-orange p-6 flex flex-col justify-center items-center text-center"
+            data-testid="benefit-cta-card"
+          >
+            <Sparkles className="w-8 h-8 text-white/80 mb-3" />
+            <div className="text-white text-xl font-bold mb-3">Ready to Start?</div>
             <button
-              className="bg-white text-primary font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              data-testid="button-enroll-now"
+              className="bg-white text-brand-orange font-bold px-8 py-3 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg"
+              data-testid="button-apply-now"
             >
-              Enroll Now
+              Apply Now
             </button>
           </div>
         </div>
