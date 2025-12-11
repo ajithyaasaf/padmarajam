@@ -4,6 +4,7 @@ import { StatsBar } from "@/components/home/StatsBar";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { CourseGrid } from "@/components/home/CourseGrid";
+import { CourseBenefits } from "@/components/home/CourseBenefits";
 import { ValueStack } from "@/components/home/ValueStack";
 import { DistanceEducation } from "@/components/home/DistanceEducation";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -19,6 +20,7 @@ export default function Home() {
         <AboutSection />
         <ProcessSteps />
         <CourseGrid />
+        <CourseBenefits />
         <ValueStack />
         <DistanceEducation />
         <Testimonials />
