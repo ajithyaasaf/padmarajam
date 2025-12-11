@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 const benefits = [
   "30 Years in Finance Education",
   "Professional Faculties",
-  "Time-Saving, In-School Learning",
+  "Flexible Learning Schedule",
   "AI Smart Class",
   "Daily & Weekend Classes",
   "Top-Quality Study Materials",
