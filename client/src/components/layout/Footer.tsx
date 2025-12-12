@@ -70,13 +70,21 @@ export function Footer() {
                   Madurai - 625002.
                 </span>
               </li>
-              <li className="flex items-center gap-3 text-white/70">
-                <Phone className="h-5 w-5 text-brand-orange shrink-0" />
-                <a href="tel:+919344108771" className="hover:text-white transition-colors">+91 93441 08771</a>
+              <li className="flex items-start gap-3 text-white/70">
+                <Phone className="h-5 w-5 text-brand-orange shrink-0 mt-1" />
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+917373708771" className="hover:text-white transition-colors">+91 7373708771</a>
+                  <a href="tel:+919344108771" className="hover:text-white transition-colors">+91 9344108771</a>
+                  <a href="tel:+918144408771" className="hover:text-white transition-colors">+91 8144408771</a>
+                </div>
               </li>
-              <li className="flex items-center gap-3 text-white/70">
-                <Mail className="h-5 w-5 text-brand-orange shrink-0" />
-                <a href="mailto:admissions@prim.edu.in" className="hover:text-white transition-colors">admissions@prim.edu.in</a>
+              <li className="flex items-start gap-3 text-white/70">
+                <Mail className="h-5 w-5 text-brand-orange shrink-0 mt-1" />
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:padmarajam@gmail.com" className="hover:text-white transition-colors">padmarajam@gmail.com</a>
+                  <a href="mailto:primpadmarajam@gmail.com" className="hover:text-white transition-colors">primpadmarajam@gmail.com</a>
+                  <a href="mailto:padmarajam.balan@yahoo.com" className="hover:text-white transition-colors">padmarajam.balan@yahoo.com</a>
+                </div>
               </li>
             </ul>
           </div>
