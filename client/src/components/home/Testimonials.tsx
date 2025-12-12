@@ -21,7 +21,7 @@ const reviews = [
     year: "2023 Batch"
   },
   {
-    name: "Arjun Mehta",
+    name: "Rahul Sharma",
     course: "CMA US",
     image: student2,
     text: "Passing CMA in my first attempt seemed impossible until I joined PRIM. The structured approach and mock exams gave me the confidence I needed.",
@@ -45,7 +45,7 @@ export function Testimonials() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
             <h2 className="font-sans text-3xl md:text-4xl font-bold text-brand-purple mb-4">
-              We Let Our Results Speak.
+              Student Success Stories
             </h2>
             <p className="text-lg text-muted-foreground">
               Join hundreds of successful professionals who started their journey at PRIM.

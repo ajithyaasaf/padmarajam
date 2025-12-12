@@ -205,7 +205,7 @@ export function CourseGrid() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div className="max-w-2xl">
                 <h2 className="font-sans text-5xl md:text-6xl font-bold text-brand-purple mb-6 leading-[0.9]">
-                    Academic <br/> Programs
+                    Professional <br/> Courses
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-lg">
                     Rigorous professional qualifications designed for ambitious students who aim for the C-Suite.
