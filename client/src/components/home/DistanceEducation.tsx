@@ -7,16 +7,6 @@ import { useState } from "react";
 const courses = [
   {
     id: 1,
-    title: "Vocational Diploma",
-    subtitle: "Skill Based Training",
-    description: "Job-ready vocational programs designed for immediate industry placement.",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop",
-    features: ["Practical Workshops", "Industry Certification", "100% Placement Support"],
-    icon: Award,
-    color: "from-blue-600 to-blue-800"
-  },
-  {
-    id: 2,
     title: "University Programs",
     subtitle: "UG & PG Degrees",
     description: "Recognized degrees from Manonmaniam Sundaranar University with flexible learning.",
@@ -24,6 +14,16 @@ const courses = [
     features: ["UGC Recognized", "Weekend Classes", "Digital Library Access"],
     icon: GraduationCap,
     color: "from-purple-600 to-purple-800"
+  },
+  {
+    id: 2,
+    title: "Vocational Diploma",
+    subtitle: "Skill Based Training",
+    description: "Job-ready vocational programs designed for immediate industry placement.",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop",
+    features: ["Practical Workshops", "Industry Certification", "100% Placement Support"],
+    icon: Award,
+    color: "from-blue-600 to-blue-800"
   },
   {
     id: 3,
@@ -50,24 +50,24 @@ export function DistanceEducation() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <motion.div 
-               initial={{ opacity: 0, x: -20 }}
-               whileInView={{ opacity: 1, x: 0 }}
-               viewport={{ once: true }}
-               className="flex items-center gap-2 mb-4 text-brand-orange"
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-2 mb-4 text-brand-orange"
             >
               <Globe className="h-5 w-5 animate-spin-slow" />
               <span className="font-bold tracking-widest uppercase text-sm">Global Learning</span>
             </motion.div>
-            
+
             <h2 className="font-sans text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-              Education Beyond <br/> Boundaries
+              Education Beyond <br /> Boundaries
             </h2>
             <p className="text-xl text-white font-light max-w-xl">
               Break the barriers of traditional classroom learning. Access world-class education from anywhere in the world.
             </p>
           </div>
-          
+
           <Button className="hidden md:flex bg-white text-black hover:bg-white/90 rounded-full h-14 px-8 font-bold text-lg">
             Explore All Programs
           </Button>
@@ -87,9 +87,9 @@ export function DistanceEducation() {
             >
               {/* Background Image & Overlay */}
               <div className="absolute inset-0">
-                <img 
-                  src={course.image} 
-                  alt={course.title} 
+                <img
+                  src={course.image}
+                  alt={course.title}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className={cn(
@@ -109,16 +109,16 @@ export function DistanceEducation() {
                 )}
 
                 <motion.div layout="position">
-                   <div className="bg-white/20 backdrop-blur-md w-fit px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">
-                     {course.subtitle}
-                   </div>
-                   
-                   <h3 className={cn(
-                     "font-sans font-bold mb-2 transition-all duration-300 text-white",
-                     activeId === course.id ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"
-                   )}>
-                     {course.title}
-                   </h3>
+                  <div className="bg-white/20 backdrop-blur-md w-fit px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">
+                    {course.subtitle}
+                  </div>
+
+                  <h3 className={cn(
+                    "font-sans font-bold mb-2 transition-all duration-300 text-white",
+                    activeId === course.id ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"
+                  )}>
+                    {course.title}
+                  </h3>
                 </motion.div>
 
                 <div className={cn(
@@ -146,12 +146,12 @@ export function DistanceEducation() {
             </motion.div>
           ))}
         </div>
-        
+
         {/* Mobile View All Button */}
         <div className="mt-8 md:hidden">
-            <Button className="w-full bg-white text-black hover:bg-white/90 h-12 font-bold rounded-xl">
-               Explore All Programs
-            </Button>
+          <Button className="w-full bg-white text-black hover:bg-white/90 h-12 font-bold rounded-xl">
+            Explore All Programs
+          </Button>
         </div>
 
       </div>

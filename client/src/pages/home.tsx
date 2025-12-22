@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/home/Hero";
 import { StatsBar } from "@/components/home/StatsBar";
+import { SuccessStoryFeature } from "@/components/home/SuccessStoryFeature";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { CourseGrid } from "@/components/home/CourseGrid";
@@ -8,6 +9,7 @@ import { CourseBenefits } from "@/components/home/CourseBenefits";
 import { ValueStack } from "@/components/home/ValueStack";
 import { DistanceEducation } from "@/components/home/DistanceEducation";
 import { Testimonials } from "@/components/home/Testimonials";
+import { CareerOpportunities } from "@/components/home/CareerOpportunities";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
@@ -17,6 +19,7 @@ export default function Home() {
       <main>
         <Hero />
         <StatsBar />
+        <SuccessStoryFeature />
         <AboutSection />
         <ProcessSteps />
         <CourseGrid />
@@ -24,6 +27,7 @@ export default function Home() {
         <ValueStack />
         <DistanceEducation />
         <Testimonials />
+        <CareerOpportunities />
       </main>
       <Footer />
     </div>

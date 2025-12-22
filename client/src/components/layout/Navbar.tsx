@@ -17,10 +17,14 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
+    { name: "About Us", href: "#about" },
     { name: "Courses", href: "#courses" },
-    { name: "Faculty", href: "#faculty" },
-    { name: "Success Stories", href: "/success-stories" },
-    { name: "Campus", href: "#campus" },
+    { name: "Success Stories", href: "#success-stories" },
+    { name: "Distance Education", href: "#distance-education" },
+    { name: "Job Portal", href: "#" },
+    { name: "Gallery", href: "#" },
+    { name: "Blogs", href: "#" },
+    { name: "Contact Us", href: "#" },
   ];
 
   return (
@@ -31,13 +35,13 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/">
           <div className="flex items-center gap-3 group h-16 cursor-pointer">
-             <img src={logo} alt="PRIM Logo" className="h-full w-auto object-contain" />
+            <img src={logo} alt="PRIM Logo" className="h-full w-auto object-contain" />
           </div>
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => 
+          {navLinks.map((link) =>
             link.href.startsWith("#") ? (
               <a
                 key={link.name}
@@ -74,7 +78,7 @@ export function Navbar() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col gap-8 mt-8">
                 <div className="flex flex-col gap-4">
-                  {navLinks.map((link) => 
+                  {navLinks.map((link) =>
                     link.href.startsWith("#") ? (
                       <a
                         key={link.name}
