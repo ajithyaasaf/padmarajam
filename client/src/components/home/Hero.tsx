@@ -12,14 +12,14 @@ import {
 const slides = [
   {
     id: 1,
-    desktop: "/images/hero-slide-new-desktop.jpg",
+    desktop: "/images/hero-windows-latest.jpg",
     mobile: "/images/hero-slide-1-mobile.jpg",
     alt: "India's No.1 Premiere Finance Education Institution",
   },
   // Placeholder for second slide as requested (using same image for now to demonstrate slider)
   {
     id: 2,
-    desktop: "/images/hero-slide-new-desktop.jpg",
+    desktop: "/images/hero-windows-latest.jpg",
     mobile: "/images/hero-slide-1-mobile.jpg",
     alt: "30+ Years of Excellence with 3500+ Successful Students",
   },
