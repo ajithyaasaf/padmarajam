@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { CheckCircle2, Quote, Award, Sparkles } from "lucide-react";
-import founderImage from "@/assets/founder.png";
+import founderImage from "@assets/photo_png_1765196212090_1766389562248.png";
 import { useRef } from "react";
 
 export function AboutSection() {

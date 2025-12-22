@@ -90,6 +90,20 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Google Maps Section */}
+        <div className="mb-12 rounded-2xl overflow-hidden shadow-lg border border-white/10">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.3547920869876!2d78.1245786!3d9.9357824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5c3a8b8b8b1%3A0x8b8b8b8b8b8b8b8b!2sNo.10%2C%20Kalpalam%20Road%2C%20Goripalayam%2C%20Madurai%20625002!5e0!3m2!1sen!2sin!4v1766390700000"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full"
+          />
+        </div>
+
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
           <p>&copy; 2025 Padmarajam Institute of Management. All rights reserved.</p>
           <div className="flex gap-6">

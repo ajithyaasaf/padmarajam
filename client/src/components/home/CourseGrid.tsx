@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, BookOpen, LineChart, Globe, Scale, ArrowRight, TrendingUp, Calculator, Megaphone, Briefcase, Award, Play, Gavel } from "lucide-react";
 import { cn } from "@/lib/utils";
+import caLogo from "@assets/CA-India_1766390096766.jpg";
+import accaLogo from "@assets/ACCA_logo_1766390120214.png";
+import cimaLogo from "@assets/CIMA_Logo_1766390160801.jpg";
+import cmaLogo from "@assets/CMA_logo_1766390178252.jpg";
+import csLogo from "@assets/CS_logo_1766390199864.png";
 import {
   Dialog,
   DialogContent,
@@ -22,9 +27,10 @@ interface CourseCardProps {
   className?: string;
   delay?: number;
   variant?: "default" | "featured" | "dark";
+  logo?: string;
 }
 
-function CourseCard({ title, subtitle, description, icon: Icon, className, delay = 0, variant = "default" }: CourseCardProps) {
+function CourseCard({ title, subtitle, description, icon: Icon, className, delay = 0, variant = "default", logo }: CourseCardProps) {
   const isFeatured = variant === "featured";
   const isDark = variant === "dark";
 
@@ -55,7 +61,11 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
                 "h-16 w-16 rounded-2xl flex items-center justify-center text-2xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3",
                 "bg-white/10 text-white backdrop-blur-sm"
               )}>
-                <Icon className="h-8 w-8" />
+                {logo ? (
+                  <img src={logo} alt={title} className="h-full w-full object-contain p-1" />
+                ) : (
+                  <Icon className="h-8 w-8" />
+                )}
               </div>
               
               <div className={cn(
@@ -227,6 +237,7 @@ export function CourseGrid() {
             subtitle="Strategic Finance"
             description="Comprehensive coaching from Foundation to Final. Integrated curriculum for exam success."
             icon={BookOpen}
+            logo={caLogo}
             className="md:col-span-2 min-h-[400px]"
             variant="default"
             delay={0.1}
@@ -238,6 +249,7 @@ export function CourseGrid() {
             subtitle="International Career"
             description="Your passport to working in over 180 countries worldwide."
             icon={Globe}
+            logo={accaLogo}
             className="md:col-span-1 min-h-[300px]"
             variant="default"
             delay={0.2}
@@ -249,6 +261,7 @@ export function CourseGrid() {
             subtitle="Management Accounting"
             description="Global body for management accountants, offering the CGMA designation."
             icon={TrendingUp}
+            logo={cimaLogo}
             className="md:col-span-1 min-h-[300px]"
             delay={0.3}
           />
@@ -259,6 +272,7 @@ export function CourseGrid() {
             subtitle="The Gold Standard"
             description="Master strategic financial management for global enterprises."
             icon={Award}
+            logo={cmaLogo}
             className="md:col-span-1"
             delay={0.4}
           />
@@ -269,19 +283,11 @@ export function CourseGrid() {
             subtitle="Corporate Governance"
             description="Essential qualification for corporate compliance, legal matters, and board operations."
             icon={Gavel}
+            logo={csLogo}
             className="md:col-span-1"
             delay={0.45}
           />
 
-        <div className="md:col-span-2 bg-white rounded-[2rem] p-10 border border-border/50 flex flex-col md:flex-row items-center justify-between gap-8 hover:shadow-xl transition-shadow duration-300 group">
-            <div className="max-w-md">
-                <h3 className="font-sans text-3xl font-bold text-brand-purple mb-2">Company Secretary</h3>
-                <p className="text-muted-foreground">Become the compliance backbone of major corporations with expert legal guidance.</p>
-            </div>
-            <button className="shrink-0 bg-brand-orange text-white px-8 py-4 rounded-full font-bold hover:bg-brand-orange/90 transition-all shadow-lg hover:shadow-brand-orange/20 flex items-center gap-2 group-hover:scale-105">
-                Course Details <ArrowRight className="h-5 w-5" />
-            </button>
-        </div>
 
         </div>
 
