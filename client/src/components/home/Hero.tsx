@@ -14,14 +14,14 @@ const slides = [
     id: 1,
     desktop: "/images/hero-slide-new-desktop.jpg",
     mobile: "/images/hero-slide-1-mobile.jpg",
-    alt: "ACCA - The Passport to Global Career Success",
+    alt: "India's No.1 Premiere Finance Education Institution",
   },
   // Placeholder for second slide as requested (using same image for now to demonstrate slider)
   {
     id: 2,
     desktop: "/images/hero-slide-new-desktop.jpg",
     mobile: "/images/hero-slide-1-mobile.jpg",
-    alt: "Join the Premier Finance Education Institution",
+    alt: "30+ Years of Excellence with 3500+ Successful Students",
   },
 ];
 
