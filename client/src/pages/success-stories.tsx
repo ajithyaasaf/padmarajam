@@ -40,16 +40,23 @@ export default function SuccessStories() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Video Side */}
-              <div className="relative bg-gradient-to-br from-brand-purple to-brand-blue p-8 md:p-12 flex items-center justify-center min-h-[500px]">
+              <div className="relative bg-gradient-to-br from-brand-purple to-brand-blue p-8 md:p-12 flex items-center justify-center" style={{ minHeight: '500px' }}>
                 <div className="absolute inset-0 opacity-20">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
                 </div>
-                <div className="relative z-10 w-full aspect-video rounded-2xl overflow-hidden bg-black/40 border border-white/20 group cursor-pointer hover:border-white/40 transition-all">
+                <div className="relative z-10 w-full max-w-2xl rounded-2xl overflow-hidden border-4 border-white/20" style={{ paddingBottom: '56.25%', position: 'relative', height: 0 }}>
                   <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/kSeJtMnec0c?t=1s"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 'none',
+                      borderRadius: '1rem'
+                    }}
+                    src="https://www.youtube.com/embed/kSeJtMnec0c?start=1&modestbranding=1"
                     title="Success Story from Sivaganga"
-                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
