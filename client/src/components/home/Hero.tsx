@@ -16,10 +16,9 @@ const slides = [
     mobile: "/images/hero-slide-1-mobile.jpg",
     alt: "ACCA - The Passport to Global Career Success",
   },
-  // Placeholder for second slide as requested (using same image for now to demonstrate slider)
   {
     id: 2,
-    desktop: "/images/hero-slide-new-desktop.jpg",
+    desktop: "/images/hero-slide-2-desktop.jpg",
     mobile: "/images/hero-slide-1-mobile.jpg",
     alt: "Join the Premier Finance Education Institution",
   },
@@ -64,7 +63,7 @@ export function Hero() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        
+
         {/* Navigation Arrows */}
         <CarouselPrevious className="left-4 md:left-8 h-12 w-12 bg-white/20 hover:bg-white/40 border-none text-white backdrop-blur-sm" />
         <CarouselNext className="right-4 md:right-8 h-12 w-12 bg-white/20 hover:bg-white/40 border-none text-white backdrop-blur-sm" />
