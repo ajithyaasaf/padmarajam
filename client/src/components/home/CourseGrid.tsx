@@ -58,7 +58,7 @@ function CourseCard({ title, subtitle, description, icon: Icon, className, delay
           <div className="relative z-10">
             <div className="flex justify-between items-start mb-8">
               <div className={cn(
-                "h-16 w-16 rounded-2xl flex items-center justify-center text-2xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3",
+                "h-16 w-16 rounded-2xl flex items-center justify-center text-2xl transition-transform duration-500 group-hover:scale-110",
                 "bg-white/10 text-white backdrop-blur-sm"
               )}>
                 {logo ? (

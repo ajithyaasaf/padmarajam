@@ -31,7 +31,7 @@ export function AboutSection() {
                    <img 
                       src={founderImage} 
                       alt="Mr. PA. Balan" 
-                      className="w-full h-auto object-cover scale-150 object-top translate-y-12"
+                      className="w-full h-auto object-cover scale-150 object-top translate-y-20"
                    />
                 </div>
                 
