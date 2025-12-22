@@ -104,11 +104,16 @@ export function Footer() {
           />
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-          <p>&copy; 2025 Padmarajam Institute of Management. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4 text-sm text-white/50">
+            <p>&copy; 2025 Padmarajam Institute of Management. All rights reserved.</p>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+          </div>
+          <div className="text-center text-sm text-white/50 pt-4 border-t border-white/10">
+            <p>Designed and developed by <a href="https://godivatech.com" target="_blank" rel="noopener noreferrer" className="text-brand-orange hover:text-white transition-colors font-medium">godivatech</a></p>
           </div>
         </div>
       </div>
