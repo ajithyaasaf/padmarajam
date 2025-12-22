@@ -19,7 +19,7 @@ export function Navbar() {
   const navLinks = [
     { name: "Courses", href: "#courses" },
     { name: "Faculty", href: "#faculty" },
-    { name: "Success Stories", href: "#success" },
+    { name: "Success Stories", href: "/success-stories" },
     { name: "Campus", href: "#campus" },
   ];
 
@@ -37,15 +37,23 @@ export function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-foreground/80 hover:text-brand-orange transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-brand-orange after:transition-all hover:after:w-full"
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) => 
+            link.href.startsWith("#") ? (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-foreground/80 hover:text-brand-orange transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-brand-orange after:transition-all hover:after:w-full"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link key={link.name} href={link.href}>
+                <span className="text-sm font-medium text-foreground/80 hover:text-brand-orange transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-brand-orange after:transition-all hover:after:w-full cursor-pointer">
+                  {link.name}
+                </span>
+              </Link>
+            )
+          )}
         </div>
 
         {/* CTAs */}
@@ -66,15 +74,23 @@ export function Navbar() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col gap-8 mt-8">
                 <div className="flex flex-col gap-4">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      className="text-xl font-sans font-medium text-foreground hover:text-brand-orange transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  ))}
+                  {navLinks.map((link) => 
+                    link.href.startsWith("#") ? (
+                      <a
+                        key={link.name}
+                        href={link.href}
+                        className="text-xl font-sans font-medium text-foreground hover:text-brand-orange transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link key={link.name} href={link.href}>
+                        <span className="text-xl font-sans font-medium text-foreground hover:text-brand-orange transition-colors cursor-pointer">
+                          {link.name}
+                        </span>
+                      </Link>
+                    )
+                  )}
                 </div>
                 <div className="flex flex-col gap-4 mt-auto">
                   <Button className="w-full bg-brand-orange text-white hover:bg-brand-orange/90">
