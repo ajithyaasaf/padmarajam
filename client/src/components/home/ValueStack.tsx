@@ -51,7 +51,7 @@ export function ValueStack() {
              <div className="lg:sticky lg:top-32">
                 <span className="text-brand-orange font-bold tracking-widest uppercase text-sm mb-4 block">Why Choose PRIM</span>
                 <h2 className="font-sans text-5xl md:text-6xl font-bold text-brand-purple mb-8 leading-tight">
-                  More Than <br/> Just A <br/> Classroom.
+                  More Than <br/> Just A <br/> Classroom
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                   We believe environment shapes excellence. Our infrastructure and pedagogy are designed to create financial leaders, not just exam passers.
