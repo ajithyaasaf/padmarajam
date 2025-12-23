@@ -7,7 +7,7 @@ import { useState } from "react";
 const courses = [
   {
     id: 1,
-    title: "University Programs",
+    title: "Distance Education",
     subtitle: "UG & PG Degrees",
     description: "Recognized degrees from Manonmaniam Sundaranar University with flexible learning.",
     image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2000&auto=format&fit=crop",
